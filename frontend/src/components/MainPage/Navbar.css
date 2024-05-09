@@ -1,0 +1,30 @@
+/* Header */
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #cfd8dc;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
