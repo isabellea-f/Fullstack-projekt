@@ -1,0 +1,21 @@
+body {
+  background-color: bisque;
+}
+
+.shop-option {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 45vh;
+}
+.shop-option-women {
+  background-color: pink;
+  width: 35%;
+}
+
+.shop-option-men {
+  background-color: rgb(78, 78, 194);
+  width: 35%;
+}

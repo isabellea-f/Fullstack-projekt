@@ -28,7 +28,7 @@ const App: React.FC = () => {
         link2="About"
         link3="Products"
       />
-      <Header />
+      <Header type="primary" />
       <ShopOption />
       {/*    <h2>Product names</h2>
       <ul>
@@ -36,6 +36,7 @@ const App: React.FC = () => {
           <li key={product.id}>{product.name}</li>
         ))}
       </ul> */}
+      <Header type="secondary" />
     </>
   );
 };

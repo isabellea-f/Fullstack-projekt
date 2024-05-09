@@ -1,0 +1,11 @@
+.headerPrimary {
+  background-color: aqua;
+  height: 60vh;
+}
+
+.headerSecondary {
+  background-color: rgb(169, 169, 180);
+  height: 60vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
