@@ -7,7 +7,7 @@ const db = new sqlite3.Database(path.resolve(__dirname, "test.sqlite"));
 
 // Endpoint to fetch all data from the database
 app.get("/categories", (req: Request, res: Response) => {
-  db.all("SELECT * FROM product", (err, rows) => {
+  db.all("SELECT * FROM categories", (err, rows) => {
     if (err) {
       console.log(err.message);
       res.status(500).send("Database error");
