@@ -7,7 +7,9 @@ interface QuickPageProps {
 const QuickPage: React.FC<QuickPageProps> = ({ title }) => {
   return (
     <div className="quickpage-container">
-      <h3>{title}</h3>
+      <div className="quickpage">
+        <h3>{title}</h3>
+      </div>
     </div>
   );
 };

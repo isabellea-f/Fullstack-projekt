@@ -32,7 +32,11 @@ const App: React.FC = () => {
       </div>
       {/* Second header */}
       <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
-      <QuickPage title={"Hello"} />
+      <div className="quickpage-container">
+        <QuickPage title={"Hello"} />
+        <QuickPage title={"Mjau"} />
+        <QuickPage title={"Duck"} />
+      </div>
     </>
   );
 };
