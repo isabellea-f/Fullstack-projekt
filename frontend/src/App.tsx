@@ -1,6 +1,5 @@
 /* Main page */
 
-import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/MainPage/Navbar";
 import ShopOption from "./components/MainPage/ShopOption";
@@ -12,14 +11,6 @@ interface Product {
 }
 
 const App: React.FC = () => {
-  const [categories, setCategories] = useState<Product[]>([]);
-
-  useEffect(() => {
-    fetch("/categories")
-      .then((response) => response.json())
-      .then((data) => setCategories(data));
-  }, []);
-
   return (
     <>
       <Navbar
@@ -28,14 +19,18 @@ const App: React.FC = () => {
         link2="About"
         link3="Products"
       />
-      <Header type="primary" title={"First header"} />
-      {/* Women / Men categories */}
+      <Header
+        type="primary"
+        title={"Shop the Collection"}
+        desc={"Spring Summer 2024"}
+      />
+      {/* Women & Men category option */}
       <div className="shop-options-container">
-        <ShopOption title={"Shop Women"} />
-        <ShopOption title={"Shop Men"} />
+        <ShopOption index={0} />
+        <ShopOption index={1} />
       </div>
       {/* Second header */}
-      <Header type="secondary" title={"Second Header"} />
+      <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
     </>
   );
 };

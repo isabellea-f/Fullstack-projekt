@@ -2,15 +2,14 @@
 h1 {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 /* Navbar */
 
 nav {
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
-  background: #cfd8dc;
+  padding: 1rem;
   align-items: center;
 }
 

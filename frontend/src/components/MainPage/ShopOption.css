@@ -1,7 +1,3 @@
-body {
-  background-color: bisque;
-}
-
 .shop-option {
   margin-top: 8vh;
   margin-bottom: 8vh;
@@ -11,7 +7,7 @@ body {
   height: 40vh;
 }
 .shop-option-category {
-  background-color: pink;
+  background-color: rgb(166, 174, 184);
   width: 90%;
   display: flex;
   justify-content: center;

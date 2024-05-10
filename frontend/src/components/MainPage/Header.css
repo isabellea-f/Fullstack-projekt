@@ -1,12 +1,48 @@
 .headerPrimary {
-  background-color: aqua;
+  background-color: rgb(199, 199, 199);
   height: 65vh;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  font-size: 2rem;
 }
 
+/* Text styling */
+.headerPrimary .header-title {
+  background-color: inherit;
+}
+.headerPrimary .header-desc {
+  background-color: inherit;
+}
+
+.headerPrimary h2 {
+  background-color: inherit;
+}
+
+.headerPrimary h4 {
+  background-color: inherit;
+}
+
+/* Second header  */
 .headerSecondary {
   background-color: rgb(169, 169, 180);
   height: 60vh;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 8vh;
+}
+
+.headerSecondary .header-title {
+  background-color: inherit;
+}
+.headerSecondary .header-desc {
+  background-color: inherit;
+}
+
+.headerSecondary h2 {
+  background-color: inherit;
+}
+
+.headerSecondary h4 {
+  background-color: inherit;
 }
