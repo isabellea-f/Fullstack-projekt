@@ -4,11 +4,12 @@ import "./Header.css";
 // Define an interface for component props
 interface HeaderProps {
   type: "primary" | "secondary";
+  title: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ type }) => {
+const Header: React.FC<HeaderProps> = ({ type, title }) => {
   const headerStyle = type === "primary" ? "headerPrimary" : "headerSecondary";
-  return <div className={headerStyle}>Hello</div>;
+  return <div className={headerStyle}>{title}</div>;
 };
 
 export default Header;

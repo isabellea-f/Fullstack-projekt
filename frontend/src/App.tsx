@@ -12,12 +12,12 @@ interface Product {
 }
 
 const App: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Product[]>([]);
 
   useEffect(() => {
     fetch("/categories")
       .then((response) => response.json())
-      .then((data) => setProducts(data));
+      .then((data) => setCategories(data));
   }, []);
 
   return (
@@ -28,15 +28,14 @@ const App: React.FC = () => {
         link2="About"
         link3="Products"
       />
-      <Header type="primary" />
-      <ShopOption />
-      {/*    <h2>Product names</h2>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>{product.name}</li>
-        ))}
-      </ul> */}
-      <Header type="secondary" />
+      <Header type="primary" title={"First header"} />
+      {/* Women / Men categories */}
+      <div className="shop-options-container">
+        <ShopOption title={"Shop Women"} />
+        <ShopOption title={"Shop Men"} />
+      </div>
+      {/* Second header */}
+      <Header type="secondary" title={"Second Header"} />
     </>
   );
 };

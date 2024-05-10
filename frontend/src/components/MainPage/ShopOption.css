@@ -5,17 +5,20 @@ body {
 .shop-option {
   margin-top: 8vh;
   margin-bottom: 8vh;
-  width: 100%;
+  width: 35vw;
   display: flex;
   justify-content: space-evenly;
-  height: 45vh;
+  height: 40vh;
 }
-.shop-option-women {
+.shop-option-category {
   background-color: pink;
-  width: 35%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.shop-option-men {
-  background-color: rgb(78, 78, 194);
-  width: 35%;
+.category-title {
+  font-size: 2rem;
+  margin-bottom: 4vh;
 }

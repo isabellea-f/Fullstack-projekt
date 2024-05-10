@@ -1,14 +1,15 @@
 import "./ShopOption.css";
 
 interface Props {
-  // Define props here if needed
+  title: string;
 }
 
-const ShopOption: React.FC<Props> = () => {
+const ShopOption: React.FC<Props> = ({ title }) => {
   return (
     <div className="shop-option">
-      <div className="shop-option-women">Women</div>
-      <div className="shop-option-men">Men</div>
+      <div className="shop-option-category">
+        <span className="category-title"> {title}</span>
+      </div>
     </div>
   );
 };
