@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/MainPage/Navbar";
 import ShopOption from "./components/MainPage/ShopOption";
 import Header from "./components/MainPage/Header";
+import QuickPage from "./components/MainPage/QuickPage";
 
 interface Product {
   id: number;
@@ -31,6 +32,7 @@ const App: React.FC = () => {
       </div>
       {/* Second header */}
       <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
+      <QuickPage title={"Hello"} />
     </>
   );
 };
