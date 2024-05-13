@@ -13,6 +13,10 @@ interface Product {
 }
 
 const App: React.FC = () => {
+  const links1 = ["Link 1.1", "Link 1.2", "Link 1.3"];
+  const links2 = ["Link 2.1", "Link 2.2", "Link 2.3"];
+  const links3 = ["Link 3.1", "Link 3.2", "Link 3.3"];
+
   return (
     <>
       <Navbar
@@ -38,7 +42,15 @@ const App: React.FC = () => {
         <QuickPage title={"Mjau"} />
         <QuickPage title={"Duck"} />
       </div>
-      <Footer title={"footer"} desc={"mjau"} />
+      <Footer
+        title1={"Services"}
+        title2={"The Company"}
+        title3={"Kaffekopp"}
+        desc1={"mjau"}
+        links1={links1}
+        links2={links2}
+        links3={links3}
+      />
     </>
   );
 };
