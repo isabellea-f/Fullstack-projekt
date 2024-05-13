@@ -1,14 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
-.shop-options-container {
+/* .shop-options-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
 .quickpage-container {
   display: flex;

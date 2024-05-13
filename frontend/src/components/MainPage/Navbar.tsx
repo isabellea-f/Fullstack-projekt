@@ -1,4 +1,4 @@
-import "./Navbar.css";
+/* import "./Navbar.css";
 
 interface Props {
   title?: string;
@@ -28,6 +28,41 @@ const Navbar: React.FC<Props> = ({
           </li>
           <li>
             <a href="#">{link3}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
+ */
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+
+interface Props {
+  title?: string;
+}
+
+const Navbar: React.FC<Props> = ({ title = "Company Title" }) => {
+  return (
+    <div>
+      <header className="navbar-header">
+        <h1 className="company-title">
+          <Link to="/">{title}</Link>
+        </h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/shop">Shop</Link>
+          </li>
+          <li>
+            <Link to="/">Collection</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>

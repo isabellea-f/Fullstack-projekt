@@ -4,13 +4,24 @@ h1 {
   justify-content: center;
   padding: 0.8rem;
 }
+
+.navbar-header {
+  padding-bottom: 2vh;
+}
+.navbar-header a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
 /* Navbar */
 
 nav {
   display: flex;
   justify-content: center;
-  padding: 1rem;
   align-items: center;
+  padding-bottom: 2vh;
 }
 
 nav ul {
