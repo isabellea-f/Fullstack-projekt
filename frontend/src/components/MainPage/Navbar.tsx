@@ -64,6 +64,12 @@ const Navbar: React.FC<Props> = ({ title = "Company Title" }) => {
           <li>
             <Link to="/about">About</Link>
           </li>
+          <li>
+            <Link to="/">World Of CompanyTitle</Link>
+          </li>
+          <li>
+            <Link to="/">Art of Living</Link>
+          </li>
         </ul>
       </nav>
     </div>

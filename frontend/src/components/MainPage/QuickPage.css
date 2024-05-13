@@ -43,8 +43,19 @@
 .quickpage-container {
   display: flex;
   align-items: center;
+  align-items: flex-end;
   margin: 0 auto;
-  margin-bottom: 8vh;
+  margin-bottom: 2vh;
+}
+
+.quickpage h3 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.quickpage p {
+  display: flex;
+  align-items: flex-end;
 }
 
 @media (max-width: 650px) {
