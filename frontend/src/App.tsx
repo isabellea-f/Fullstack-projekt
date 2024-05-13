@@ -5,6 +5,7 @@ import Navbar from "./components/MainPage/Navbar";
 import ShopOption from "./components/MainPage/ShopOption";
 import Header from "./components/MainPage/Header";
 import QuickPage from "./components/MainPage/QuickPage";
+import Footer from "./components/MainPage/Footer";
 
 interface Product {
   id: number;
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         <QuickPage title={"Mjau"} />
         <QuickPage title={"Duck"} />
       </div>
+      <Footer title={"footer"} desc={"mjau"} />
     </>
   );
 };
