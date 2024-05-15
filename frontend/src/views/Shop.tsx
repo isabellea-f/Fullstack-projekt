@@ -1,6 +1,7 @@
 import Navbar from "../components/MainPage/Navbar";
 import "./Shop.css";
 import ShopOption from "../components/MainPage/ShopOption";
+import { Outlet } from "react-router-dom";
 
 const Shop = () => {
   return (
