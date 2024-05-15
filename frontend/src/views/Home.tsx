@@ -15,24 +15,41 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar />
-
+      {/* Video with text */}
       <Header
         type="primary"
         title={"SHOP THE COLLECTION"}
         desc={"SPRING SUMMER 2024"}
       />
-      <h2>Endless Summer</h2>
+      {/* Endless summer h2 with p text */}
+      <div className="endless-summer">
+        <h2 className="endless-summer-h2">Endless Summer</h2>
+        <p className="endless-summer-p">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+          enim deleniti hic minus deserunt nisi necessitatibus dolor magnam,
+          aliquam fuga maiores dolore accusamus nihil animi, consequuntur quidem
+          sapiente! Veritatis, exercitationem magni ipsam quis, minus quo
+          inventore id doloremque ipsa incidunt beatae consectetur nisi.
+          Delectus error accusantium temporibus et sed voluptate.
+        </p>
+      </div>
       {/* Women & Men category option */}
       <div className="shop-options-container">
         <div className="shop-women">
           <ShopOption index={0} bgImg={"OIG3.jpg"} />
         </div>
         <div className="shop-men">
-          <ShopOption index={1} bgImg={"male-model2.webp"} />
+          <ShopOption index={1} bgImg={"OIG4-male.jpg"} />
         </div>
       </div>
       {/* Second header */}
-      <h4 className="featured">Featured</h4>
+      <div className="featured">
+        <h2 className="featured-h2">Featured</h2>
+        <p className="featured-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+          eaque.
+        </p>
+      </div>
       <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
       <div className="quickpage-container">
         <QuickPage title={"Sign Up"} />

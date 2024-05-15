@@ -97,5 +97,8 @@ export default ShopOption;
 
 const Wrap = styled.div<{ bgImg: string }>`
   background-image: ${(props) => `url("images/${props.bgImg}")`};
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; /* Add this line */
+  width: 450px;
 `;

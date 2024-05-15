@@ -1,14 +1,20 @@
 import Navbar from "../components/MainPage/Navbar";
-import ShopOption from "../components/MainPage/ShopOption";
 import "./Shop.css";
+import ShopOption from "../components/MainPage/ShopOption";
 
 const Shop = () => {
   return (
     <div>
       <Navbar />
-      <ShopOption index={0} />
-      <ShopOption index={1} />
       <h1>Shop</h1>
+      <div className="shop-options-container">
+        <div className="shop-women">
+          <ShopOption index={0} bgImg={"OIG3.jpg"} />
+        </div>
+        <div className="shop-men">
+          <ShopOption index={1} bgImg={"OIG4-male.jpg"} />
+        </div>
+      </div>
     </div>
   );
 };
