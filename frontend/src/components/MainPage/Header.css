@@ -46,6 +46,20 @@
   z-index: -100;
 }
 
+.Video {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+}
+
+.Video video {
+  width: 100%;
+  height: auto;
+}
+
 .headerSecondary h2 {
   font-size: 2rem;
   color: black;
@@ -60,4 +74,18 @@
   text-align: center;
   margin-top: 2vh;
   margin-left: -30%;
+}
+
+@media (max-width: 768px) {
+  .headerSecondary h2 {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+    margin-left: 0;
+  }
+
+  .headerSecondary h4 {
+    font-size: 1.2rem;
+    margin-top: 1vh;
+    margin-left: 0;
+  }
 }
