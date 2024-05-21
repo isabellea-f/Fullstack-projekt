@@ -25,6 +25,19 @@ app.get("/product", (req: Request, res: Response) => {
 });
 
 // FETCH ALL CATEGORIES
+// FETCH ALL PRODUCTS
+app.get("/product", (req: Request, res: Response) => {
+  db.all("SELECT * FROM product", (err, rows) => {
+    if (err) {
+      console.log(err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.json(rows);
+  });
+});
+
+// FETCH ALL CATEGORIES
 app.get("/categories", (req: Request, res: Response) => {
   db.all("SELECT * FROM categories", (err, rows) => {
     if (err) {

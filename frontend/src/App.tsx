@@ -13,10 +13,9 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="shop" element={<Shop />} />
-<Route path="/shopwomenmen" element={<ShopWomenMen/>} />
-<Route path="/shop/:category" element={<ShopWomen />} />
-<Route path="/shop/:category" element={<ShopWomen />} />
-
+        <Route path="/shopwomenmen" element={<ShopWomenMen />} />
+        <Route path="/shop/:category" element={<ShopWomen />} />
+        <Route path="/shop/:category" element={<ShopWomen />} />
       </Routes>
     </Router>
   );
