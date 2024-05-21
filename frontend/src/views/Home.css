@@ -23,6 +23,7 @@
   font-size: 1.2rem;
   margin-bottom: 8vh;
   text-align: center;
+  width: 100%;
 }
 
 .endless-summer,
@@ -44,14 +45,13 @@
   height: 80px;
 }
 
+.endless-summer-p {
+  padding-left: 250px;
+  padding-right: 250px;
+  text-align: center;
+}
 .featured {
   margin-top: 8vh;
-}
-
-.endless-summer-p {
-  padding-left: 120px;
-  padding-right: 120px;
-  text-align: center;
 }
 
 .services {
@@ -59,6 +59,7 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
+  padding-top: 8vh;
   padding-bottom: 8vh;
 }
 
@@ -83,18 +84,21 @@
 }
 
 .text-container {
-  margin-top: 100px;
-  background-color: rgb(227, 233, 233);
+  margin-top: 100px; /* 
+  background-color: rgb(227, 233, 233); */
   width: 500px;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: -200;
+  background-image: url("/images/rings.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
 .text-container-2 {
-  background-color: rgb(227, 233, 233);
   margin-top: 100px;
   width: 500px;
   height: 500px;
@@ -102,6 +106,10 @@
   align-items: center;
   justify-content: center;
   z-index: -200;
+  background-image: url("/images/white-handbag.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
 /* .text-container-2 p {

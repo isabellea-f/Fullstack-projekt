@@ -39,24 +39,25 @@
   margin-right: 5vw;
   margin-bottom: 8vh;
 }
-
 .Image {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   height: 100%;
   object-fit: contain;
   z-index: -100;
+  border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
 .headerSecondary h2 {
   font-size: 2rem;
   color: black;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 22vh;
   margin-left: -30%;
   height: 50px;
+  font-weight: 600;
 }
 
 .headerSecondary h4 {
@@ -65,6 +66,7 @@
   text-align: center;
   margin-top: 1vh;
   margin-left: -30%;
+  font-weight: 600;
 }
 
 /* Video */

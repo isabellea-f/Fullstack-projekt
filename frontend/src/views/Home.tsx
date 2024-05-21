@@ -35,36 +35,18 @@ const Home: React.FC = () => {
           Delectus error accusantium temporibus et sed voluptate.
         </p>
       </div>
-
       {/* Second header */}
       {/* First container */}
       <div className="second-header-text-container">
-        <div className="text-container">
-          <p>Image</p>
-        </div>
-      </div>
-      {/* Middle container */}
-      <div className="featured">
-        <h2 className="featured-h2">Featured</h2>
-        <p className="featured-p">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
-          eaque.
-        </p>
+        <div className="text-container"></div>
       </div>
       {/* Third Container */}
       <div className="second-header-text-container-2">
-        <div className="text-container-2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-            dolorum ipsum delectus dignissimos nemo ut expedita corrupti
-            voluptas reprehenderit cum.
-          </p>
-        </div>
+        <div className="text-container-2"></div>
       </div>
-      <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
-
+      <Header type="secondary" title={" "} desc={" "} /> {/* Title and desc? */}
       <div className="services">
-        <h4>CompanyName Services</h4>
+        <h4>COMPANY ULTRA SERVICES</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus sed
           excepturi omnis aspernatur harum voluptate, nemo laudantium ducimus
@@ -79,19 +61,18 @@ const Home: React.FC = () => {
       </div>
       <div className="quickpage-text">
         <div className="sign-up">
-          <h4>Sign up</h4>
+          <h4>SIGN UP</h4>
           <p>Sign up to take part of excluse deals</p>
         </div>
         <div className="services">
-          <h4>Services</h4>
+          <h4>SERVICES</h4>
           <p>Contact us</p>
         </div>
         <div className="art-of-giving">
-          <h4>The Art Of Giving</h4>
+          <h4>THE ART OF GIFTING</h4>
           <p>Gifts for him and her</p>
         </div>
       </div>
-
       <Footer
         title1={"Services"}
         title2={"The Company"}
