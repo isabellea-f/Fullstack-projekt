@@ -33,36 +33,43 @@ const Home: React.FC = () => {
           inventore id doloremque ipsa incidunt beatae consectetur nisi.
           Delectus error accusantium temporibus et sed voluptate.
         </p>
+        <Link to="/shop/women">Shop Women</Link>
+        <Link to="/shop/men">Shop Men</Link>
       </div>
       {/* Women & Men category option */}
       {/* Shop Women */}
-      <Link to="/shop/women">Shop Women</Link>
       <div className="shop-options-container">
         <div className="shop-women">
           <ShopOption index={0} bgImg={"OIG3.jpg"} />
         </div>
         {/* Shop Men */}
-        <Link to="/shop/men">Shop Men</Link>
         <div className="shop-men">
           <ShopOption index={1} bgImg={"OIG4-male.jpg"} />
         </div>
       </div>
       {/* Second header */}
-      <div className="hejhej-container">
-        <div className="hejhej">
-          <p>hej hej</p>
+      {/* First container */}
+      <div className="second-header-text-container">
+        <div className="text-container">
+          <p>Image</p>
         </div>
       </div>
+      {/* Middle container */}
       <div className="featured">
         <h2 className="featured-h2">Featured</h2>
         <p className="featured-p">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
           eaque.
         </p>
-        <div className="hejhej-container2">
-          <div className="hejhej2">
-            <p>hej hej</p>
-          </div>
+      </div>
+      {/* Third Container */}
+      <div className="second-header-text-container-2">
+        <div className="text-container-2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+            dolorum ipsum delectus dignissimos nemo ut expedita corrupti
+            voluptas reprehenderit cum.
+          </p>
         </div>
       </div>
       <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
