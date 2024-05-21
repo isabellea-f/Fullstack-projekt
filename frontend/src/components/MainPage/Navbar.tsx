@@ -1,44 +1,7 @@
-/* import "./Navbar.css";
-
-interface Props {
-  title?: string;
-  link1?: string;
-  link2?: string;
-  link3?: string;
-}
-
-const Navbar: React.FC<Props> = ({
-  title = "Default Title",
-  link1 = "Default Link 1",
-  link2 = "Default Link 2",
-  link3 = "Default Link 3",
-}) => {
-  return (
-    <div>
-      <header>
-        <h1>{title}</h1>
-      </header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">{link1}</a>
-          </li>
-          <li>
-            <a href="#">{link2}</a>
-          </li>
-          <li>
-            <a href="#">{link3}</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
-};
-
-export default Navbar;
- */
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsHandbag } from "react-icons/bs";
+import { CiSearch } from "react-icons/ci";
 import "./Navbar.css";
 
 interface Props {
@@ -50,7 +13,9 @@ const Navbar: React.FC<Props> = ({ title = "Company Title" }) => {
     <div>
       <header className="navbar-header">
         <h1 className="company-title">
+          <CiSearch className="search-icon" />
           <Link to="/">{title}</Link>
+          <BsHandbag className="bag-icon" />
         </h1>
       </header>
       <nav>
