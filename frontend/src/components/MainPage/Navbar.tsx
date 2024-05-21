@@ -8,7 +8,7 @@ interface Props {
   title?: string;
 }
 
-const Navbar: React.FC<Props> = ({ title = "Company Title" }) => {
+const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
   return (
     <div>
       <header className="navbar-header">

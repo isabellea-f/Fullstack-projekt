@@ -41,7 +41,17 @@
 
 .endless-summer-h2,
 .featured-h2 {
-  margin-bottom: 20px;
+  height: 80px;
+}
+
+.featured {
+  margin-top: 8vh;
+}
+
+.endless-summer-p {
+  padding-left: 120px;
+  padding-right: 120px;
+  text-align: center;
 }
 
 .services {

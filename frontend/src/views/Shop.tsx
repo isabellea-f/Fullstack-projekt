@@ -7,7 +7,7 @@ const Shop = () => {
   return (
     <div>
       <Navbar />
-      <h1>Shop</h1>
+      <h2>Shop</h2>
       <div className="shop-options-container">
         <div className="shop-women">
           <ShopOption index={0} bgImg={"OIG3.jpg"} />

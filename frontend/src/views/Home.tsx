@@ -19,12 +19,13 @@ const Home: React.FC = () => {
       {/* Video with text */}
       <Header
         type="primary"
-        title={"SHOP THE COLLECTION"}
-        desc={"SPRING SUMMER 2024"}
+        title={"SPRING SUMMER 2024"}
+        desc={"SHOP THE COLLECTION"}
       />
       {/* Endless summer h2 with p text */}
+      {/* Change class name */}
       <div className="endless-summer">
-        <h2 className="endless-summer-h2">Endless Summer</h2>
+        <h2 className="endless-summer-h2">STYLE WITH SUBSTANCE</h2>
         <p className="endless-summer-p">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
           enim deleniti hic minus deserunt nisi necessitatibus dolor magnam,

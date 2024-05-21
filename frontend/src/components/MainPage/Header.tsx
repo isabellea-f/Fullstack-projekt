@@ -49,9 +49,11 @@ const Header: React.FC<HeaderProps> = ({ type, title, desc }) => {
   return (
     <div className="header-content">
       {type === "primary" ? (
-        <video autoPlay loop muted className="Video">
-          <source src={mediaSource} type="video/mp4" />
-        </video>
+        <div className="video-container">
+          <video autoPlay loop muted className="Video">
+            <source src={mediaSource} type="video/mp4" />
+          </video>
+        </div>
       ) : (
         <img src={mediaSource} alt="Header background" className="Image" />
       )}
