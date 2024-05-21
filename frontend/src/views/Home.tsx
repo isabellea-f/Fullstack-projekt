@@ -1,17 +1,17 @@
 import React from "react";
 import Navbar from "../components/MainPage/Navbar";
-import Header from "../components/MainPage/Header";
-import ShopOption from "../components/MainPage/ShopOption";
+import Header from "../components/MainPage/Header"; /* 
+import ShopOption from "../components/MainPage/ShopOption"; */
 import QuickPage from "../components/MainPage/QuickPage";
 import Footer from "../components/MainPage/Footer";
 import "./Home.css";
 import "../App.css";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; */
 
 const Home: React.FC = () => {
-  const links1 = ["Link 1.1", "Link 1.2", "Link 1.3"];
-  const links2 = ["Link 2.1", "Link 2.2", "Link 2.3"];
-  const links3 = ["Link 3.1", "Link 3.2", "Link 3.3"];
+  const links1 = ["Help Center", "Contact Us", "Returns & Refunds"];
+  const links2 = ["Our Story", "Careers", "Press"];
+  const links3 = ["Privacy Policy", "Terms of Service", "Cookie Policy"];
 
   return (
     <>
@@ -34,20 +34,8 @@ const Home: React.FC = () => {
           inventore id doloremque ipsa incidunt beatae consectetur nisi.
           Delectus error accusantium temporibus et sed voluptate.
         </p>
-        <Link to="/shop/women">Shop Women</Link>
-        <Link to="/shop/men">Shop Men</Link>
       </div>
-      {/* Women & Men category option */}
-      {/* Shop Women */}
-      <div className="shop-options-container">
-        <div className="shop-women">
-          <ShopOption index={0} bgImg={"OIG3.jpg"} />
-        </div>
-        {/* Shop Men */}
-        <div className="shop-men">
-          <ShopOption index={1} bgImg={"OIG4-male.jpg"} />
-        </div>
-      </div>
+
       {/* Second header */}
       {/* First container */}
       <div className="second-header-text-container">
@@ -108,7 +96,6 @@ const Home: React.FC = () => {
         title1={"Services"}
         title2={"The Company"}
         title3={"Kaffekopp"}
-        desc1={"mjau"}
         links1={links1}
         links2={links2}
         links3={links3}

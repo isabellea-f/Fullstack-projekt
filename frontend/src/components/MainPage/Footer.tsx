@@ -27,7 +27,6 @@ interface FooterProps {
   title1: string;
   title2: string;
   title3: string;
-  desc1: string;
   links1: string[];
   links2: string[];
   links3: string[];
@@ -37,7 +36,6 @@ const Footer: React.FC<FooterProps> = ({
   title1,
   title2,
   title3,
-  desc1,
   links1,
   links2,
   links3,
@@ -45,8 +43,7 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <div className="footer">
       <div className="footer-group">
-        <h2>{title1}</h2>
-        <p>{desc1}</p>
+        <h4>{title1}</h4>
         {links1.map((link, index) => (
           <a key={index} href={link}>
             {link}
@@ -54,8 +51,7 @@ const Footer: React.FC<FooterProps> = ({
         ))}
       </div>
       <div className="footer-group">
-        <h2>{title2}</h2>
-        <p>{desc1}</p>
+        <h4>{title2}</h4>
         {links2.map((link, index) => (
           <a key={index} href={link}>
             {link}
@@ -63,8 +59,7 @@ const Footer: React.FC<FooterProps> = ({
         ))}
       </div>
       <div className="footer-group">
-        <h2>{title3}</h2>
-        <p>{desc1}</p>
+        <h4>{title3}</h4>
         {links3.map((link, index) => (
           <a key={index} href={link}>
             {link}
