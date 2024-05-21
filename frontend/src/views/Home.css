@@ -35,3 +35,55 @@
 .featured-h2 {
   margin-bottom: 20px;
 }
+
+.services {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-bottom: 8vh;
+}
+
+.hejhej-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  /* top: 0; */
+  /*  bottom: 0; */
+  left: -50%;
+  right: 0;
+  margin: auto;
+}
+
+.hejhej-container2 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: -50%;
+  margin: auto;
+}
+
+.hejhej {
+  margin-top: 100px;
+  background-color: aqua;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -200;
+}
+
+.hejhej2 {
+  margin-top: 605px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -200;
+  background-image: url("/images/rings.jpg");
+}

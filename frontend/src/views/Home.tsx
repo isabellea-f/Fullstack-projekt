@@ -6,6 +6,7 @@ import QuickPage from "../components/MainPage/QuickPage";
 import Footer from "../components/MainPage/Footer";
 import "./Home.css";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const links1 = ["Link 1.1", "Link 1.2", "Link 1.3"];
@@ -34,27 +35,51 @@ const Home: React.FC = () => {
         </p>
       </div>
       {/* Women & Men category option */}
+      {/* Shop Women */}
+      <Link to="/shop/women">Shop Women</Link>
       <div className="shop-options-container">
         <div className="shop-women">
           <ShopOption index={0} bgImg={"OIG3.jpg"} />
         </div>
+        {/* Shop Men */}
+        <Link to="/shop/men">Shop Men</Link>
         <div className="shop-men">
           <ShopOption index={1} bgImg={"OIG4-male.jpg"} />
         </div>
       </div>
       {/* Second header */}
+      <div className="hejhej-container">
+        <div className="hejhej">
+          <p>hej hej</p>
+        </div>
+      </div>
       <div className="featured">
         <h2 className="featured-h2">Featured</h2>
         <p className="featured-p">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
           eaque.
         </p>
+        <div className="hejhej-container2">
+          <div className="hejhej2">
+            <p>hej hej</p>
+          </div>
+        </div>
       </div>
       <Header type="secondary" title={"Find Your Accent"} desc={"blabla"} />
+
+      <div className="services">
+        <h4>CompanyName Services</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus sed
+          excepturi omnis aspernatur harum voluptate, nemo laudantium ducimus
+          ut?
+        </p>
+      </div>
       <div className="quickpage-container">
-        <QuickPage title={"Sign Up"} />
-        <QuickPage title={"Services"} />
-        <QuickPage title={"The Art of Gifting"} />
+        <QuickPage title={" "} bgImg="/images/watch.jpg" />
+        <QuickPage title={" "} bgImg="/images/letter.jpg" />
+        <QuickPage title={" "} bgImg="/images/gift2.jpg" />
+        {/* Remove titles? */}
       </div>
       <div className="quickpage-text">
         <div className="sign-up">
