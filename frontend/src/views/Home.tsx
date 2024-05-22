@@ -7,6 +7,7 @@ import Footer from "../components/MainPage/Footer";
 import "./Home.css";
 import "../App.css";
 /* import { Link } from "react-router-dom"; */
+import Modal from "../components/Modal";
 
 const Home: React.FC = () => {
   const links1 = ["Help Center", "Contact Us", "Returns & Refunds"];
@@ -61,7 +62,7 @@ const Home: React.FC = () => {
       </div>
       <div className="quickpage-text">
         <div className="sign-up">
-          <h4>SIGN UP</h4>
+          <Modal />
           <p>Sign up to take part of excluse deals</p>
         </div>
         <div className="services">
