@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsHandbag } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
+import LoginModal from "../LoginModal";
 import "./Navbar.css";
 
 interface Props {
@@ -33,7 +34,9 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
             <Link to="/">Art of Gifting</Link>
           </li>
           <li>
-            <Link to="/">Log In</Link>
+            <Link to="/">
+              <LoginModal />
+            </Link>
           </li>
         </ul>
       </nav>

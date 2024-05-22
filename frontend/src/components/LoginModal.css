@@ -1,0 +1,10 @@
+.login-button {
+  background-color: black !important;
+  color: white;
+  width: 25%;
+  border: none !important;
+}
+
+.login-button:hover {
+  background-color: rgb(26, 25, 25);
+}
