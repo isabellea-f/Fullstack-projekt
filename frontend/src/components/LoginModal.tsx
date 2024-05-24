@@ -6,9 +6,31 @@ import "./LoginModal.css";
 
 function LoginModal() {
   const [show, setShow] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log("login submitted");
+    const response = await fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (response.ok) {
+      console.log("logged in");
+    } else {
+      console.log("login failed");
+    }
+
+    handleClose();
+  };
 
   return (
     <>
@@ -18,23 +40,26 @@ function LoginModal() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </Form.Group>
-            <Button
-              className="login-button"
-              variant="primary"
-              type="submit"
-              onClick={handleClose}
-            >
+            <Button className="login-button" variant="primary" type="submit">
               Log In
-            </Button>{" "}
+            </Button>
             <Button
               className="login-button"
               variant="primary"

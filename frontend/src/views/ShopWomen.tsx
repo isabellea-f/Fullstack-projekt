@@ -36,8 +36,7 @@ const ShopWomen = () => {
 
 export default ShopWomen;
  */
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/MainPage/Navbar";
 import ShopCard from "../components/Shop/ShopCard";
 import Footer from "../components/MainPage/Footer";
@@ -75,7 +74,7 @@ const ShopWomen = () => {
       <Navbar />
       <h1>Shop Women's Collection</h1>
       <div className="card-container">
-        {products.map((product) => (
+        {products.map((product: Product) => (
           <ShopCard
             key={product.product_id}
             title={product.name}
@@ -88,7 +87,6 @@ const ShopWomen = () => {
         title1={"Services"}
         title2={"The Company"}
         title3={"Kaffekopp"}
-        desc1={"mjau"}
         links1={links1}
         links2={links2}
         links3={links3}
