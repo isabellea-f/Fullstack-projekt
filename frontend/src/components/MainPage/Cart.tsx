@@ -1,34 +1,10 @@
-import React, { useState, useEffect } from "react";
-
-interface CartProduct {
-  id: string;
-  name: string;
-  text: string;
-  price: number;
-}
+import React from "react";
+import { useCart } from "../MainPage/CartContent";
 
 const Cart: React.FC = () => {
-  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
-
-  useEffect(() => {
-    fetch("/cart")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Cart products:", data);
-        setCartProducts(data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
+  const { cartProducts } = useCart();
 
   const total = cartProducts.reduce((sum, product) => sum + product.price, 0);
-  console.log(cartProducts);
 
   return (
     <div>

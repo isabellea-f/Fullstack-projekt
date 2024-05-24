@@ -1,6 +1,8 @@
+import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./ShopCard.css";
+import { useCart } from "../MainPage/CartContent";
 
 interface Product {
   id: string;
@@ -9,31 +11,9 @@ interface Product {
   price: number;
 }
 
-interface ShopCardProps extends Product {}
+const ShopCard: React.FC<Product> = ({ id, name, text, price }) => {
+  const { addToCart } = useCart();
 
-function addToCart(product: Product) {
-  /*  console.log("Adding product to cart:", product); */
-
-  fetch("/cart", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(product),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => console.log("Product added to cart: ", data))
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-}
-
-const ShopCard: React.FC<ShopCardProps> = ({ id, name, text, price }) => {
   return (
     <div className="card-body-container">
       <Card style={{ width: "18rem" }}>
