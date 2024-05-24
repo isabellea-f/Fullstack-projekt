@@ -17,6 +17,7 @@ h1 {
   font-size: 30px;
   position: relative;
   top: 20px;
+  cursor: pointer;
 }
 
 .company-title {
