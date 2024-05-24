@@ -6,7 +6,7 @@ import QuickPage from "../components/MainPage/QuickPage";
 import Footer from "../components/MainPage/Footer";
 import "./Home.css";
 import "../App.css";
-/* import { Link } from "react-router-dom"; */
+import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 
 const Home: React.FC = () => {
@@ -35,6 +35,8 @@ const Home: React.FC = () => {
           inventore id doloremque ipsa incidunt beatae consectetur nisi.
           Delectus error accusantium temporibus et sed voluptate.
         </p>
+        <Link to="/shop/women">Shop Women</Link>
+        <Link to="/shop/men">Shop Men</Link>
       </div>
       {/* Second header */}
       {/* First container */}
