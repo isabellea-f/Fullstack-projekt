@@ -12,7 +12,8 @@ interface Product {
 interface ShopCardProps extends Product {}
 
 function addToCart(product: Product) {
-  console.log("Adding product to cart:", product);
+  /*  console.log("Adding product to cart:", product); */
+
   fetch("/cart", {
     method: "POST",
     headers: {
@@ -31,6 +32,7 @@ function addToCart(product: Product) {
       console.error("Error:", error);
     });
 }
+
 const ShopCard: React.FC<ShopCardProps> = ({ id, name, text, price }) => {
   return (
     <div className="card-body-container">
