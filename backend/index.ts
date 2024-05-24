@@ -108,6 +108,17 @@ app.post("/cart", (req, res) => {
   );
 });
 
+app.get("/cart", (req, res) => {
+  db.all(`SELECT * FROM cart`, (err, rows) => {
+    if (err) {
+      console.error(err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.json(rows);
+  });
+});
+
 // Middleware to serve static files from the dist folder
 app.use(express.static(path.join(path.resolve(), "dist")));
 
