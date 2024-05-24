@@ -15,18 +15,29 @@ function LoginModal() {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     console.log("login function called");
-    const response = await fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
 
-    if (response.ok) {
-      console.log("logged in");
-    } else {
-      console.log("login failed");
+    const requestBody = JSON.stringify({ email, password });
+    console.log("request body:", requestBody);
+
+    try {
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: requestBody,
+      });
+
+      console.log("response status:", response.status);
+
+      if (response.ok) {
+        console.log("logged in");
+      } else {
+        const responseBody = await response.json();
+        console.log("login failed:", responseBody);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
     }
 
     handleClose();
