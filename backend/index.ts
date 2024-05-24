@@ -50,40 +50,43 @@ app.post("/", (request: Request, response: Response) => {
         .status(500)
         .send("An error occurred while saving the form data.");
     } else {
-      response.send("Form data has been received and saved.");
+      response.send("User data has been received and saved.");
     }
   });
 });
 
 /* LOGIN */
 
-const express = require("express");
-const sqlite3 = require("sqlite3").verbose();
-const app = express();
-
 app.use(express.json());
+interface Account {
+  email: string;
+  password: string;
+}
 
-app.post("/login", (request: Request, response: Response) => {
-  let db = new sqlite3.Database("./db.sqlite");
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
 
-  let sql = `SELECT * FROM users WHERE email = ? AND password = ?`;
-  db.get(sql, [req.body.email, req.body.password], (err, row) => {
-    if (err) {
-      return res.status(500).send(err.message);
+  if (!email || !password) {
+    res.status(400).json({ message: "Bad Request" });
+    return;
+  }
+
+  const sql = "SELECT * FROM account WHERE email = ? AND password = ?";
+  db.get(sql, [email, password], (error, account: Account | null) => {
+    if (error) {
+      console.error("Database error:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+      return;
     }
 
-    if (row) {
-      res.send({ message: "Login successful" });
+    if (account) {
+      console.log("Login successful for email:", email);
+      res.status(200).json({ message: "OK" });
     } else {
-      res.status(401).send({ message: "Invalid email or password" });
+      console.log("Login failed for email:", email);
+      res.status(401).json({ message: "Unauthorized" });
     }
   });
-
-  db.close();
-});
-
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
 });
 
 // Middleware to serve static files from the dist folder
