@@ -31,10 +31,10 @@ function LoginModal() {
       console.log("response status:", response.status);
 
       if (response.ok) {
-        console.log("logged in");
+        console.log("You have successfully logged in!");
       } else {
         const responseBody = await response.json();
-        console.log("login failed:", responseBody);
+        console.log("The login was unsuccessful", responseBody);
       }
     } catch (error) {
       console.error("Error during login:", error);
