@@ -89,6 +89,25 @@ app.post("/login", (req, res) => {
   });
 });
 
+/* Add to cart */
+
+app.post("/cart", (req, res) => {
+  const product = req.body;
+  console.log(product.name);
+  db.run(
+    `INSERT INTO cart (product_id, name, price) VALUES (?, ?, ?)`,
+    [product.id, product.name, product.price],
+    function (err) {
+      if (err) {
+        console.error(err.message);
+        res.status(500).send("Database error");
+        return;
+      }
+      res.json({ message: "Product added to cart" });
+    }
+  );
+});
+
 // Middleware to serve static files from the dist folder
 app.use(express.static(path.join(path.resolve(), "dist")));
 
