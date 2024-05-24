@@ -14,7 +14,7 @@ function LoginModal() {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    console.log("login submitted");
+    console.log("login function called");
     const response = await fetch("/login", {
       method: "POST",
       headers: {
@@ -57,7 +57,12 @@ function LoginModal() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <Button className="login-button" variant="primary" type="submit">
+            <Button
+              className="login-button"
+              variant="primary"
+              type="submit"
+              onClick={handleSubmit}
+            >
               Log In
             </Button>
             <Button

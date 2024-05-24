@@ -62,12 +62,8 @@ const ShopWomen = () => {
         console.log("Fetched products:", data);
         setProducts(data);
       })
-      .catch((error) =>
-        console.error("There was an error fetching product data:", error)
-      );
+      .catch((error) => console.error("Couldn't fetch product data", error));
   }, []);
-
-  console.log(products);
 
   return (
     <div>
