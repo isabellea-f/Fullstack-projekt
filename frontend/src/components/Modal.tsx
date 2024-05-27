@@ -41,7 +41,7 @@ function CloseShow() {
   return (
     <>
       <Button className="button" variant="link" onClick={handleShow}>
-        Sign Up
+        SIGN UP
       </Button>
 
       <Modal show={show} onHide={handleClose}>

@@ -49,7 +49,7 @@ function LoginModal() {
 
   return (
     <>
-      <Button variant="link" onClick={handleShow}>
+      <Button className="login-link" variant="link" onClick={handleShow}>
         Login
       </Button>
 

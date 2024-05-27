@@ -40,10 +40,8 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
           <li>
             <Link to="/">Art of Gifting</Link>
           </li>
-          <li>
-            <Link to="/">
-              <LoginModal />
-            </Link>
+          <li className="login-modal-container">
+            <LoginModal />
           </li>
         </ul>
       </nav>

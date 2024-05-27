@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 .login-button {
   background-color: black !important;
   color: white;
@@ -7,4 +9,13 @@
 
 .login-button:hover {
   background-color: rgb(26, 25, 25);
+}
+
+.login-link {
+  text-decoration: none !important;
+  color: black !important;
+  font-size: 1rem !important;
+  font-weight: 300 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }

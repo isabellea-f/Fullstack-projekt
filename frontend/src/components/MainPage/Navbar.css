@@ -59,6 +59,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.login-modal-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
