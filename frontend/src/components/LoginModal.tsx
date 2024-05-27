@@ -8,8 +8,12 @@ function LoginModal() {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setShowFailureMessage(false);
+  };
   const handleShow = () => setShow(true);
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -31,16 +35,16 @@ function LoginModal() {
       console.log("response status:", response.status);
 
       if (response.ok) {
-        console.log("You have successfully logged in!");
+        console.log("Login succesful");
+        handleClose();
       } else {
+        setShowFailureMessage(true);
         const responseBody = await response.json();
         console.log("The login was unsuccessful", responseBody);
       }
     } catch (error) {
       console.error("Error during login:", error);
     }
-
-    handleClose();
   };
 
   return (
@@ -51,6 +55,7 @@ function LoginModal() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
+          {showFailureMessage && <p>Login failed. Please try again.</p>}
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
