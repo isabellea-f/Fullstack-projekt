@@ -47,6 +47,7 @@ interface Product {
   name: string;
   desc: string;
   price: number;
+  id: string;
 }
 
 const ShopWomen = () => {
@@ -73,7 +74,8 @@ const ShopWomen = () => {
         {products.map((product: Product) => (
           <ShopCard
             key={product.product_id}
-            title={product.name}
+            id={product.id}
+            name={product.name}
             text={product.desc}
             price={product.price}
           />
