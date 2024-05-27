@@ -76,14 +76,7 @@ const Home: React.FC = () => {
           <p>Gifts for him and her</p>
         </div>
       </div>
-      <Footer
-        title1={"Services"}
-        title2={"The Company"}
-        title3={"Kaffekopp"}
-        links1={links1}
-        links2={links2}
-        links3={links3}
-      />
+      <Footer />
     </>
   );
 };
