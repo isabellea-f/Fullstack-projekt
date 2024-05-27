@@ -55,7 +55,9 @@ function LoginModal() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-          {showFailureMessage && <p>Login failed. Please try again.</p>}
+          {showFailureMessage && (
+            <p>Wrong e-mail or password. Please try again.</p>
+          )}
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
