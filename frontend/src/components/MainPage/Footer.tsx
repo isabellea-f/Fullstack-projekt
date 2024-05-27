@@ -23,48 +23,51 @@ export default Footer;
 
 import "./Footer.css";
 
-interface FooterProps {
-  title1: string;
-  title2: string;
-  title3: string;
-  links1: string[];
-  links2: string[];
-  links3: string[];
-}
-
-const Footer: React.FC<FooterProps> = ({
-  title1,
-  title2,
-  title3,
-  links1,
-  links2,
-  links3,
-}) => {
+const Footer: React.FC = () => {
   return (
     <div className="footer">
       <div className="footer-group">
-        <h4>{title1}</h4>
-        {links1.map((link, index) => (
-          <a key={index} href={link}>
-            {link}
-          </a>
-        ))}
+        <h4>Company</h4>
+        <a href="/about">About Us</a>
+        <a href="/careers">Careers</a>
+        <a href="/press">Press</a>
+        <a href="/sustainability">Sustainability</a>
       </div>
       <div className="footer-group">
-        <h4>{title2}</h4>
-        {links2.map((link, index) => (
-          <a key={index} href={link}>
-            {link}
-          </a>
-        ))}
+        <h4>Customer Service</h4>
+        <a href="/faq">FAQ</a>
+        <a href="/shipping-returns">Shipping & Returns</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/track-order">Track Order</a>
       </div>
       <div className="footer-group">
-        <h4>{title3}</h4>
-        {links3.map((link, index) => (
-          <a key={index} href={link}>
-            {link}
-          </a>
-        ))}
+        <h4>Shop</h4>
+        <a href="/new-arrivals">New Arrivals</a>
+        <a href="/best-sellers">Best Sellers</a>
+        <a href="/gift-cards">Gift Cards</a>
+        <a href="/sale">Sale</a>
+      </div>
+      <div className="footer-group">
+        <h4>Follow Us</h4>
+        <a href="https://www.facebook.com/yourbrand" target="_blank">
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/yourbrand" target="_blank">
+          Instagram
+        </a>
+        <a href="https://www.twitter.com/yourbrand" target="_blank">
+          Twitter
+        </a>
+        <a href="https://www.pinterest.com/yourbrand" target="_blank">
+          Pinterest
+        </a>
+      </div>
+      <div className="footer-group">
+        <h4>Legal</h4>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-conditions">Terms & Conditions</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/accessibility">Accessibility</a>
       </div>
     </div>
   );
