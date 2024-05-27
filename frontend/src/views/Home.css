@@ -26,6 +26,11 @@
   width: 100%;
 }
 
+.quickpage-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .endless-summer,
 .featured {
   display: flex;
@@ -54,13 +59,16 @@
   margin-top: 8vh;
 }
 
-.services {
+.what-we-offer {
   display: flex;
   align-items: center;
-  text-align: center;
   flex-direction: column;
-  padding-top: 8vh;
-  padding-bottom: 8vh;
+  padding-bottom: 10vh;
+  padding-top: 10vh;
+}
+
+.services {
+  margin-right: 45px;
 }
 
 .second-header-text-container {

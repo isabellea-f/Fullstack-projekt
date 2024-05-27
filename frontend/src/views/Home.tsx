@@ -10,10 +10,6 @@ import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 
 const Home: React.FC = () => {
-  const links1 = ["Help Center", "Contact Us", "Returns & Refunds"];
-  const links2 = ["Our Story", "Careers", "Press"];
-  const links3 = ["Privacy Policy", "Terms of Service", "Cookie Policy"];
-
   return (
     <>
       <Navbar />
@@ -47,8 +43,13 @@ const Home: React.FC = () => {
       <div className="second-header-text-container-2">
         <div className="text-container-2"></div>
       </div>
-      <Header type="secondary" title={" "} desc={" "} /> {/* Title and desc? */}
-      <div className="services">
+      <Header
+        type="secondary"
+        title={"Nude Tones, Bold Statements"}
+        desc={"Explore our newest"}
+      />{" "}
+      {/* Title and desc? */}
+      <div className="what-we-offer">
         <h4>COMPANY ULTRA SERVICES</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus sed
@@ -57,9 +58,15 @@ const Home: React.FC = () => {
         </p>
       </div>
       <div className="quickpage-container">
-        <QuickPage title={" "} bgImg="/images/watch.jpg" />
-        <QuickPage title={" "} bgImg="/images/letter.jpg" />
-        <QuickPage title={" "} bgImg="/images/gift2.jpg" />
+        <div className="qp-img">
+          <QuickPage title={" "} bgImg="/images/watch.jpg" />
+        </div>
+        <div className="qp-img">
+          <QuickPage title={" "} bgImg="/images/letter.jpg" />
+        </div>
+        <div className="qp-img">
+          <QuickPage title={" "} bgImg="/images/gift2.jpg" />
+        </div>
         {/* Remove titles? */}
       </div>
       <div className="quickpage-text">

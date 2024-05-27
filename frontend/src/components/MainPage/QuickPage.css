@@ -1,50 +1,13 @@
-/* .quickpage {
-  background-color: rgb(169, 169, 180);
-  display: flex;
-  justify-content: center;
-  margin-left: 4vw;
-  height: 20vh;
-  width: 20vw;
-}
-
-.quickpage-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8vh;
-}
-
-@media (max-width: 600px) {
-  .quickpage {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 50vh;
-  }
-
-  .quickpage-container {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 150vh;
-  }
-} */
-
 .quickpage {
   display: flex;
   justify-content: center;
   margin-left: 4vw;
   height: 35vh;
   width: 20vw;
-
 }
 
-.quickpage-container {
+.quickpage-img-container {
   display: flex;
-  align-items: center;
-  align-items: flex-end;
-  margin: 0 auto;
   margin-bottom: 2vh;
   background-size: cover;
   background-repeat: no-repeat;

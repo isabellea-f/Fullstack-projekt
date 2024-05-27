@@ -1,15 +1,10 @@
 .button {
-  font-size: 25px;
-  text-decoration: none;
-  color: black;
+  font-size: 25px !important;
+  text-decoration: none !important;
+  color: black !important;
+  transition: color 0.3s ease !important;
 }
 
-.button:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-/* Style the form */
 .form {
   width: 100%;
   max-width: 400px;
@@ -17,17 +12,14 @@
   margin: auto;
 }
 
-/* Style the form controls */
 .form .form-control {
   margin-bottom: 10px;
 }
 
-/* Style the form labels */
 .form .form-label {
   font-weight: bold;
 }
 
-/* Style the submit button */
 .form .btn-primary {
   width: 50%;
   background-color: black;
@@ -36,7 +28,6 @@
   margin: 0 auto;
 }
 
-/* Style the submit button */
 .form .btn-primary {
   width: 50%;
   background-color: black;
@@ -45,7 +36,6 @@
   margin: 0 auto;
 }
 
-/* Add a hover effect to the submit button */
 .form .btn-primary:hover {
   background-color: rgb(26, 25, 25);
 }
