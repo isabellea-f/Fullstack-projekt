@@ -1,7 +1,7 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 50px 20px;
+  padding: 50px 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -11,17 +11,18 @@
 .footer-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin: 20px;
   padding: 0 15px;
+  text-align: center;
 }
 
 .footer h4 {
   color: #949292;
   margin-bottom: 20px;
+  height: 1.5rem;
   font-size: 1.2em;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .footer a {
@@ -58,16 +59,11 @@
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
+    padding: 100px 20px;
   }
 
   .footer-group {
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer h4 {
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 }
