@@ -1,9 +1,8 @@
 .checkout-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #000000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  width: 100% !important;
+  background-color: #000000 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
 }
