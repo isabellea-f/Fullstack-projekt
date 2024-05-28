@@ -1,0 +1,13 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.checkout-title {
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 5px;
+  height: 70px;
+}
