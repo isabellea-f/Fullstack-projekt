@@ -14,25 +14,27 @@ const Home: React.FC = () => {
     <>
       <Navbar />
       {/* Video with text */}
-      <Header
-        type="primary"
-        title={"SPRING SUMMER 2024"}
-        desc={"SHOP THE COLLECTION"}
-      />
+      <Header type="primary" title={"SPRING SUMMER"} desc={"/2024"} />
       {/* Endless summer h2 with p text */}
       {/* Change class name */}
-      <div className="endless-summer">
-        <h2 className="endless-summer-h2">STYLE WITH SUBSTANCE</h2>
-        <p className="endless-summer-p">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-          enim deleniti hic minus deserunt nisi necessitatibus dolor magnam,
-          aliquam fuga maiores dolore accusamus nihil animi, consequuntur quidem
-          sapiente! Veritatis, exercitationem magni ipsam quis, minus quo
-          inventore id doloremque ipsa incidunt beatae consectetur nisi.
-          Delectus error accusantium temporibus et sed voluptate.
-        </p>
-        <Link to="/shop/women">Shop Women</Link>
-        <Link to="/shop/men">Shop Men</Link>
+      <div id="introduction" className="introduction">
+        {/*         <h2 className="endless-summer-h2">STYLE WITH SUBSTANCE</h2> */}
+
+        {/* <p className="endless-summer-p">
+  
+        </p> */}
+        <div className="link-to-shop-container">
+          <Link to="/shop/women" className="link-to-shop">
+            Shop Women
+          </Link>
+          <Link to="/shop/men" className="link-to-shop">
+            Shop Men
+          </Link>
+          <p className="introduction-p">
+            DON’T WAIT TO INDULGE IN THE LUXURY YOU DESERVE. BROWSE OUR
+            COLLECTION AND FIND YOUR NEW FAVORITE ACCESSORY.
+          </p>
+        </div>
       </div>
       {/* Second header */}
       {/* First container */}
@@ -43,12 +45,7 @@ const Home: React.FC = () => {
       <div className="second-header-text-container-2">
         <div className="text-container-2"></div>
       </div>
-      <Header
-        type="secondary"
-        title={"Nude Tones, Bold Statements"}
-        desc={"Explore our newest"}
-      />{" "}
-      {/* Title and desc? */}
+      <Header type="secondary" title={""} desc={""} /> {/* Title and desc? */}
       <div className="what-we-offer">
         <h4>COMPANY ULTRA SERVICES</h4>
         <p>

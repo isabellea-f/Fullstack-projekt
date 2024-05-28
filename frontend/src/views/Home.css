@@ -1,72 +1,68 @@
-/* .shop-options-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 8vh;
-} */
+/* Shop Women / Shop Men */
 
-.shop-women {
-  width: 800px;
-  display: flex;
-  justify-content: center;
+.link-to-shop {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  /* Font styling */
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  position: relative;
+  font: "Montserrat", sans-serif;
+  font-weight: 200;
 }
 
-.shop-men {
-  width: 800px;
-  display: flex;
-  justify-content: center;
-}
-.quickpage-text {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  font-size: 1rem;
-  margin-bottom: 8vh;
-  text-align: center;
-  width: 100%;
+.link-to-shop::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.4s ease;
 }
 
-.quickpage-container {
-  display: flex;
-  justify-content: space-evenly;
+.link-to-shop:hover::after {
+  width: 50%;
 }
 
-.endless-summer,
-.featured {
+.link-to-shop:visited {
+  color: #000000;
+}
+
+.link-to-shop:visited {
+  color: #000000;
+}
+
+/* First paragraph */
+.introduction {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 8vh; /* 
-  margin-left: 250px;
-  margin-right: 250px; */
+  margin-bottom: 8vh;
   width: 100%;
 }
 
-.endless-summer-h2,
-.featured-h2 {
-  height: 80px;
-}
-
-.endless-summer-p {
+.introduction-p {
   padding-left: 250px;
   padding-right: 250px;
   text-align: center;
-}
-.featured {
-  margin-top: 8vh;
-}
-
-.what-we-offer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 10vh;
-  padding-top: 10vh;
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 
+/* Three image containers */
 .second-header-text-container {
   width: 40%;
   display: flex;
@@ -113,4 +109,49 @@
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+/* Services */
+
+.what-we-offer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10vh;
+  padding-top: 10vh;
+  height: 320px;
+}
+
+.what-we-offer h4 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.what-we-offer p {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.quickpage-text {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 8vh;
+  text-align: center;
+  width: 100%;
+}
+
+.quickpage-text p {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.quickpage-text h4 {
+  font-size: 1.55rem;
+  font-weight: 300;
+}
+
+.quickpage-container {
+  display: flex;
+  justify-content: space-evenly;
 }
