@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { FaShoppingCart } from "react-icons/fa";
 import "./ShopCard.css";
 import { useCart } from "../MainPage/CartContent";
 
@@ -15,23 +16,81 @@ const ShopCard: React.FC<Product> = ({ id, name, text, price }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="card-body-container">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="/images/black-handbag.jpg" />
-        <Card.Body className="card-body">
-          <Card.Title>{name}</Card.Title>
-          <Card.Text className="card-text">{text}</Card.Text>
-          <p>Price: {price}</p>
-          <Button
-            variant="primary"
-            onClick={() => addToCart({ id, name, text, price })}
-          >
-            Add to cart
-          </Button>
-        </Card.Body>
-      </Card>
-    </div>
+    <Card className="card-card" style={{ width: "18rem" }}>
+      <Card.Img
+        variant="top"
+        src="https://st4.depositphotos.com/34277362/41210/i/450/depositphotos_412106076-stock-photo-elegant-leather-ladies-handbag-isolated.jpg"
+      />
+      <Card.Body className="card-body">
+        <Card.Title>{name}</Card.Title>
+        <Card.Text className="card-text">{text}</Card.Text>
+        <p className="price">{price}kr.</p>
+        <button
+          style={{
+            display: "flex",
+            alignItems: "center",
+            background: "none",
+            border: "none",
+          }}
+          onClick={() =>
+            addToCart({
+              id,
+              name,
+              text,
+              price,
+            })
+          }
+        >
+          <span style={{ marginRight: "30px" }} className="add-to-cart">
+            Add to Cart
+          </span>
+          <FaShoppingCart size={30} color="grey" />
+        </button>
+      </Card.Body>
+    </Card>
   );
 };
 
 export default ShopCard;
+
+/* const ShopCard = () => {
+  const { addToCart } = useCart();
+
+  return (
+    <Card className="card-card" style={{ width: "18rem" }}>
+      <Card.Img
+        variant="top"
+        src="https://st4.depositphotos.com/34277362/41210/i/450/depositphotos_412106076-stock-photo-elegant-leather-ladies-handbag-isolated.jpg"
+      />
+      <Card.Body className="card-body">
+        <Card.Title>Black Handbag</Card.Title>
+        <Card.Text className="card-text">
+          This is a black handbag that is perfect for any occasion.
+        </Card.Text>
+        <p>Price: $50</p>
+        <button
+          style={{
+            display: "flex",
+            alignItems: "center",
+            background: "none",
+            border: "none",
+          }}
+          onClick={() =>
+            addToCart({
+              id: "1",
+              name: "Black Handbag",
+              text: "This is a black handbag that is perfect for any occasion.",
+              price: 50,
+            })
+          }
+        >
+          <span style={{ marginRight: "10px" }}>Add to Cart</span>
+          <FaShoppingCart size={30} color="grey" />
+        </button>
+      </Card.Body>
+    </Card>
+  );
+};
+
+export default ShopCard;
+ */
