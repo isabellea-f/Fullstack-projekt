@@ -29,7 +29,7 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
       <nav>
         <ul>
           <li>
-            <Link to="/shop">Shop</Link>
+            <a href="#endless-summer">Shop</a>
           </li>
           <li>
             <Link to="/">Collection</Link>
