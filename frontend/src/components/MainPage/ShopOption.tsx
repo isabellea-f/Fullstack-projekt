@@ -52,7 +52,7 @@ const Wrap = styled.div<{ bgImg: string }>`
   justify-content: space-between;
 `;
  */
-import { useState, useEffect } from "react";
+/* import { useState, useEffect } from "react";
 import "./ShopOption.css";
 import styled from "styled-components";
 
@@ -99,6 +99,7 @@ const Wrap = styled.div<{ bgImg: string }>`
   background-image: ${(props) => `url("images/${props.bgImg}")`};
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* Add this line */
+  background-position: center; 
   width: 450px;
 `;
+ */
