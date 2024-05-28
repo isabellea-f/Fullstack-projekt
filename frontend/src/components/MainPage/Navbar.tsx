@@ -45,7 +45,7 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
           </li>
         </ul>
       </nav>
-      <Sidebar showSidebar={showSidebar} />
+      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
     </div>
   );
 };
