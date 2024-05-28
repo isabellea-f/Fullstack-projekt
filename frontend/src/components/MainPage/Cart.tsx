@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import "./Cart.css";
 import { useCart } from "../MainPage/CartContent";
 
 const Cart: React.FC = () => {
@@ -16,6 +18,9 @@ const Cart: React.FC = () => {
         </div>
       ))}
       <h2>Total: ${total}</h2>
+      <Button variant="primary" className="checkout-button">
+        Proceed to Checkout
+      </Button>
     </div>
   );
 };
