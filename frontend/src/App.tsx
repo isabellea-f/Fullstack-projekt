@@ -4,7 +4,7 @@ import Home from "./views/Home";
 /* import Shop from "./views/Shop"; */
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductPage from "./components/Shop/ProductPage";
-// import other pages here
+import Checkout from "./views/Checkout";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +14,7 @@ const App: React.FC = () => {
         {/*         <Route path="shop" element={<Shop />} /> */}
         <Route path="/shop/:category" element={<ProductPage />} />
         <Route path="/shop/:category" element={<ProductPage />} />
+        <Route path="/checkout" Component={Checkout} />
       </Routes>
     </Router>
   );
