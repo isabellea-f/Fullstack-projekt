@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import "./Cart.css";
 import { useCart } from "../MainPage/CartContent";
+import { Link } from "react-router-dom";
 
 const Cart: React.FC = () => {
   const { cartProducts } = useCart();
@@ -19,7 +20,12 @@ const Cart: React.FC = () => {
       ))}
       <h2>Total: ${total}</h2>
       <Button variant="primary" className="checkout-button">
-        Proceed to Checkout
+        <Link
+          to="/checkout"
+          style={{ color: "inherit", textDecoration: "inherit" }}
+        >
+          Proceed to Checkout
+        </Link>
       </Button>
     </div>
   );
