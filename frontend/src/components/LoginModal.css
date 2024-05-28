@@ -9,6 +9,7 @@
 
 .login-button:hover {
   background-color: rgb(26, 25, 25);
+  text-decoration: underline;
 }
 
 .login-link {
@@ -18,4 +19,8 @@
   font-weight: 300 !important;
   padding: 0 !important;
   margin: 0 !important;
+}
+
+.login-link:hover {
+  text-decoration: underline !important;
 }
