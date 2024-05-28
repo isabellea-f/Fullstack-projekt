@@ -10,9 +10,10 @@ interface Product {
   name: string;
   text: string;
   price: number;
+  addRemove: string;
 }
 
-const ShopCard: React.FC<Product> = ({ id, name, text, price }) => {
+const ShopCard: React.FC<Product> = ({ id, name, text, price, addRemove }) => {
   const { addToCart } = useCart();
 
   return (
@@ -42,7 +43,7 @@ const ShopCard: React.FC<Product> = ({ id, name, text, price }) => {
           }
         >
           <span style={{ marginRight: "30px" }} className="add-to-cart">
-            Add to Cart
+            {addRemove}
           </span>
           <FaShoppingCart size={30} color="grey" />
         </button>

@@ -2,9 +2,6 @@ import ShopCard from "./ShopCard";
 import { useEffect, useState } from "react";
 import Navbar from "../MainPage/Navbar";
 import { useParams } from "react-router-dom";
-
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import "./ProductPage.css";
 
 interface Product {
@@ -12,6 +9,7 @@ interface Product {
   name: string;
   desc: string;
   price: number;
+  addRemove: string;
 }
 
 const ShopWomen = () => {
@@ -58,6 +56,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  addRemove="Add to cart"
                 />
               ))
           : /* Mens accessories */
@@ -73,6 +72,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  addRemove="Add to cart"
                 />
               ))}
         {/* Testkort */}
@@ -101,6 +101,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  addRemove="Add to cart"
                 />
               ))
           : /* Mens bags */
@@ -116,6 +117,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  addRemove="Add to cart"
                 />
               ))}
       </div>
