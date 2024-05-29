@@ -20,6 +20,9 @@ h1 {
   cursor: pointer;
 }
 
+.menu-icon {
+  display: none;
+}
 .company-title {
   height: 70px;
 }
@@ -81,8 +84,36 @@ nav a:hover::after {
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
+  .company-title {
+    display: flex;
+  }
+
+  .navbar-header a {
+    height: 40px;
+  }
+
+  h1 {
     align-items: center;
+    font-size: 2rem !important;
+    color: aqua;
+    display: flex;
+  }
+
+  .bag-icon,
+  .search-icon {
+    font-size: 1.5rem;
+    position: relative;
+    top: 0px;
+    cursor: pointer;
+  }
+  nav,
+  .search-icon {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.7rem;
   }
 }

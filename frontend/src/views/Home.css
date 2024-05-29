@@ -3,7 +3,7 @@
 .link-to-shop {
   display: inline-block;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 0px;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -60,6 +60,7 @@
   text-align: center;
   font-size: 1.25rem;
   font-weight: 100;
+  margin-top: 5vh;
 }
 
 /* Three image containers */
@@ -154,4 +155,55 @@
 .quickpage-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .link-to-shop {
+    font-size: 2rem; /* Adjust font size for tablets */
+    padding: 8px 16px; /* Adjust padding for tablets */
+    margin-bottom: 1vh;
+    border: 1px solid #e0dddd;
+  }
+
+  .introduction-p {
+    padding-left: 50px; /* Adjust padding for tablets */
+    padding-right: 50px; /* Adjust padding for tablets */
+  }
+
+  .second-header-text-container,
+  .second-header-text-container-2 {
+    width: 60%; /* Adjust width for tablets */
+  }
+
+  .text-container,
+  .text-container-2 {
+    width: 400px; /* Adjust width for tablets */
+    height: 400px; /* Adjust height for tablets */
+  }
+
+  .what-we-offer h4 {
+    font-size: 2rem; /* Adjust font size for tablets */
+  }
+
+  .what-we-offer p,
+  .quickpage-text p,
+  .quickpage-text h4 {
+    font-size: 1rem; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .link-to-shop-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .link-to-shop {
+    padding: 6px 12px;
+    background-color: rgb(241, 241, 241);
+  }
+
+  .introduction-p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

@@ -4,6 +4,7 @@ import { BsHandbag } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import LoginModal from "../LoginModal";
 import Sidebar from "./SideBar";
+import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.css";
 
 interface Props {
@@ -22,6 +23,7 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
       <header className="navbar-header">
         <h1 className="company-title">
           <CiSearch className="search-icon" />
+          <RxHamburgerMenu className="menu-icon" />
           <Link to="/">{title}</Link>
           <BsHandbag className="bag-icon" onClick={toggleSidebar} />
         </h1>
