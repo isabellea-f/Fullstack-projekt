@@ -88,6 +88,7 @@
   width: 100%;
   height: auto;
   z-index: -100;
+  pointer-events: none;
 }
 
 .Video video {
