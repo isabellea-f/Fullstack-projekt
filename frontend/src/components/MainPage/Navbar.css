@@ -46,7 +46,6 @@ nav ul {
   display: flex;
   list-style: none;
 }
-
 nav a {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -54,12 +53,27 @@ nav a {
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 3.5px;
+  color: #000; /* Add a default color */
+  position: relative; /* Add this to position the pseudo-element correctly */
+  transition: color 0.3s ease; /* Add a transition to the color */
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  transform: scaleX(0);
+  height: 1.2px;
+  bottom: 0;
+  left: 15%;
+  background-color: #000; /* Change this to the color of your underline */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
 }
 
+nav a:hover::after {
+  transform: scaleX(1); /* This will make the underline appear on hover */
+}
 .login-modal-container {
   display: flex;
   align-items: center;
