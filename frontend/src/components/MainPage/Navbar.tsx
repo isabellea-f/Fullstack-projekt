@@ -4,6 +4,7 @@ import { BsHandbag } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import LoginModal from "../LoginModal";
 import Sidebar from "./SideBar";
+import HamburgerMenu from "./HamburgerMenu"; // Import HamburgerMenu
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.css";
 
@@ -13,17 +14,29 @@ interface Props {
 
 const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
 
+  const toggleHamburgerMenu = () => {
+    setShowHamburgerMenu(!showHamburgerMenu);
+  };
+
   return (
     <div>
+      <HamburgerMenu
+        showHamburgerMenu={showHamburgerMenu}
+        setShowHamburgerMenu={setShowHamburgerMenu}
+      />{" "}
       <header className="navbar-header">
         <h1 className="company-title">
           <CiSearch className="search-icon" />
-          <RxHamburgerMenu className="menu-icon" />
+          <RxHamburgerMenu
+            className="menu-icon"
+            onClick={toggleHamburgerMenu}
+          />
           <Link to="/">{title}</Link>
           <BsHandbag className="bag-icon" onClick={toggleSidebar} />
         </h1>
@@ -48,6 +61,7 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
         </ul>
       </nav>
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+      {/* Use HamburgerMenu */}
     </div>
   );
 };
