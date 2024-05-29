@@ -1,4 +1,6 @@
 import { IoCloseOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import LoginModal from "../LoginModal";
 import "./HamburgerMenu.css";
 
 interface SidebarProps {
@@ -18,7 +20,33 @@ const HamburgerMenu: React.FC<SidebarProps> = ({
             className="close-icon-2"
             onClick={() => setShowHamburgerMenu(false)}
           />
-          <h2>Navbar</h2>
+        </div>
+        <div className="hamb-menu-container">
+          <ul className="hamb-ul">
+            <li className="hamb-li">
+              <a className="hamb-a" href="#introduction">
+                SHOP
+              </a>
+            </li>
+            <li className="hamb-li">
+              <Link to="/" className="hamb-a">
+                COLLECTION
+              </Link>
+            </li>
+            <li className="hamb-li">
+              <Link to="/" className="hamb-a">
+                ABOUT
+              </Link>
+            </li>
+            <li className="hamb-li">
+              <Link to="/" className="hamb-a">
+                ART OF GIFTING
+              </Link>
+            </li>
+            <li className="hamb-login-modal-container">
+              <LoginModal />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
