@@ -119,6 +119,20 @@ app.get("/cart", (req, res) => {
   });
 });
 
+/* Delete from cart */
+
+app.delete("/cart/:id", (req, res) => {
+  const id = req.params.id;
+  db.run(`DELETE FROM cart WHERE product_id = ?`, id, function (err) {
+    if (err) {
+      console.error(err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.json({ message: "Product removed from cart" });
+  });
+});
+
 // Middleware to serve static files from the dist folder
 app.use(express.static(path.join(path.resolve(), "dist")));
 
@@ -127,7 +141,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(path.resolve(), "dist", "index.html"));
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log("Server is ready at http://localhost:5000");
+  console.log("Server is ready at http://localhost:3001");
 });
