@@ -1,5 +1,18 @@
 /* Shop Women / Shop Men */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body,
+html {
+  font: "Montserrat", sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
 .link-to-shop {
   display: inline-block;
   padding: 10px 20px;

@@ -5,7 +5,6 @@ import ShopOption from "../components/MainPage/ShopOption"; */
 import QuickPage from "../components/MainPage/QuickPage";
 import Footer from "../components/MainPage/Footer";
 import "./Home.css";
-import "../App.css";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 
@@ -15,14 +14,7 @@ const Home: React.FC = () => {
       <Navbar />
       {/* Video with text */}
       <Header type="primary" title={"SPRING SUMMER"} desc={"/2024"} />
-      {/* Endless summer h2 with p text */}
-      {/* Change class name */}
       <div id="introduction" className="introduction">
-        {/*         <h2 className="endless-summer-h2">STYLE WITH SUBSTANCE</h2> */}
-
-        {/* <p className="endless-summer-p">
-  
-        </p> */}
         <div className="link-to-shop-container">
           <Link to="/shop/women" className="link-to-shop">
             Shop Women

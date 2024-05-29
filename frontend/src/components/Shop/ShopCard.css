@@ -13,7 +13,7 @@
   font-size: 1rem;
   font-weight: 200;
   letter-spacing: 3.5px;
-  width: 100%;
+  width: 95%;
 }
 
 .price,
@@ -29,14 +29,14 @@
 
 .card-card {
   background-color: #f6f8f8b4;
-  width: 380px !important;
+  width: 300px !important;
   display: flex;
   align-items: center;
   border: none;
   /* 
   border: 1px solid rgb(236, 236, 236); */ /* 
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2); */
-  margin: 20px 20px 50px 20px;
+  margin: 20px 45px 50px 20px;
   transition: box-shadow 0.45s ease, border-color 0.45s ease;
   border-radius: 10px;
 }
@@ -44,4 +44,8 @@
 .card-card:hover {
   box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.199);
   border-color: rgb(216, 216, 216);
+}
+
+.price {
+  padding-bottom: 20px;
 }

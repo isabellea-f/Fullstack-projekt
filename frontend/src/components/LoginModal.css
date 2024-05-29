@@ -15,10 +15,10 @@
 .login-link {
   text-decoration: none !important;
   color: black !important;
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   font-weight: 300 !important;
   padding: 0 !important;
-  margin: 0 !important;
+  letter-spacing: 3.5px !important;
 }
 
 .login-link:hover {

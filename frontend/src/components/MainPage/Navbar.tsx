@@ -29,16 +29,16 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
       <nav>
         <ul>
           <li>
-            <a href="#endless-summer">Shop</a>
+            <a href="#introduction">SHOP</a>
           </li>
           <li>
-            <Link to="/">Collection</Link>
+            <Link to="/">COLLECTION</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/">ABOUT</Link>
           </li>
           <li>
-            <Link to="/">Art of Gifting</Link>
+            <Link to="/">ART OF GIFTING</Link>
           </li>
           <li className="login-modal-container">
             <LoginModal />

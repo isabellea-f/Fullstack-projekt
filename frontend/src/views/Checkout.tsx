@@ -33,15 +33,67 @@ const Checkout: React.FC<Product> = () => {
         <div className="centered-container">
           <h2 className="checkout-title">Checkout</h2>
         </div>
-        <div className="cart-items">
-          <ShopCard
-            key="1"
-            id="1"
-            name="Dummy Product Name"
-            text="Dummy product description. This is some text to represent the product description."
-            price={99.99}
-            addRemove="Remove from cart"
-          />
+        <div className="checkout-container">
+          <div className="cart-items">
+            {/*     {cartItems.map((product) => (
+              <ShopCard
+                key={product.product_id}
+                id={product.product_id.toString()}
+                name={product.name}
+                text={product.desc}
+                price={product.price}
+                addRemove="Remove from cart"
+              />
+            ))} */}
+            <ShopCard
+              key="1"
+              id="1"
+              name="Dummy Product Name"
+              text=""
+              price={99.99}
+              addRemove="Remove from cart"
+            />{" "}
+            <ShopCard
+              key="1"
+              id="1"
+              name="Dummy Product Name"
+              text=""
+              price={99.99}
+              addRemove="Remove from cart"
+            />{" "}
+            <ShopCard
+              key="1"
+              id="1"
+              name="Dummy Product Name"
+              text=""
+              price={99.99}
+              addRemove="Remove from cart"
+            />{" "}
+            <ShopCard
+              key="1"
+              id="1"
+              name="Dummy Product Name"
+              text=""
+              price={99.99}
+              addRemove="Remove from cart"
+            />
+            <ShopCard
+              key="1"
+              id="1"
+              name="Dummy Product Name"
+              text=""
+              price={99.99}
+              addRemove="Remove from cart"
+            />
+            <ShopCard
+              key="1"
+              id="1"
+              name="Dummy Product Name"
+              text=""
+              price={99.99}
+              addRemove="Remove from cart"
+            />
+          </div>
         </div>
         <Footer />
       </div>

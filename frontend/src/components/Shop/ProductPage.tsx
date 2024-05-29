@@ -2,6 +2,7 @@ import ShopCard from "./ShopCard";
 import { useEffect, useState } from "react";
 import Navbar from "../MainPage/Navbar";
 import { useParams } from "react-router-dom";
+import Footer from "../MainPage/Footer";
 import "./ProductPage.css";
 
 interface Product {
@@ -121,6 +122,7 @@ const ShopWomen = () => {
                 />
               ))}
       </div>
+      <Footer />
     </div>
   );
 };

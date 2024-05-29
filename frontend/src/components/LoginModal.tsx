@@ -50,7 +50,7 @@ function LoginModal() {
   return (
     <>
       <Button className="login-link" variant="link" onClick={handleShow}>
-        Login
+        LOGIN
       </Button>
 
       <Modal show={show} onHide={handleClose}>
