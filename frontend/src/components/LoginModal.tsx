@@ -75,21 +75,23 @@ function LoginModal() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <Button
-              className="login-button"
-              variant="primary"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Log In
-            </Button>
-            <Button
-              className="login-button"
-              variant="primary"
-              onClick={handleClose}
-            >
-              Close
-            </Button>
+            <div className="login-close-container">
+              <Button
+                className="login-button"
+                variant="primary"
+                type="submit"
+                onClick={handleSubmit}
+              >
+                Log In
+              </Button>
+              <Button
+                className="close-button"
+                variant="primary"
+                onClick={handleClose}
+              >
+                Close
+              </Button>
+            </div>
           </Form>
         </Modal.Body>
       </Modal>

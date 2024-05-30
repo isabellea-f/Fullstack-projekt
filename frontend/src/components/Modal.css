@@ -22,26 +22,31 @@
 .form .form-label {
   font-weight: bold;
 }
-
-.form .btn-primary {
+.sign-up.btn.btn-primary {
+  margin-left: 80px;
+}
+.btn-primary {
+  width: 50%;
+  background-color: black !important;
+  border: none !important;
   width: 50%;
   background-color: black;
-  border: none;
-  display: block;
-  margin: 0 auto;
 }
 
-.form .btn-primary {
-  width: 50%;
-  background-color: black;
-  border: none;
-  display: block;
-  margin: 0 auto;
-}
-
-.form .btn-primary:hover {
-  background-color: rgb(26, 25, 25);
-}
-.form .btn-primary:active {
+.btn-primary:hover {
   background-color: rgb(26, 25, 25) !important;
+}
+.btn-primary:active {
+  background-color: rgb(26, 25, 25) !important;
+}
+
+.login-close-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.login-button.btn.btn-primary,
+.close-button.btn.btn-primary {
+  width: 40%;
 }

@@ -115,8 +115,8 @@ function CloseShow() {
                 You must agree to the terms and conditions.
               </Form.Control.Feedback>
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+            <Button variant="primary" type="submit" className="sign-up">
+              Sign Up
             </Button>
           </Form>
         </Modal.Body>
