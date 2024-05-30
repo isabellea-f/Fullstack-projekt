@@ -1,26 +1,16 @@
-.quickpage {
+/* .quickpage {
+  background-color: aqua;
   display: flex;
-  justify-content: center;
-  margin-left: 4vw;
-  height: 35vh;
-  width: 20vw;
-}
+}*/
 
 .quickpage-img-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.quickpage h3 {
-  display: flex;
-  align-items: flex-end;
-}
-
-.quickpage p {
-  display: flex;
-  align-items: flex-end;
+  background-color: red;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 @media (max-width: 650px) {

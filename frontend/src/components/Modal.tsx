@@ -40,7 +40,12 @@ function CloseShow() {
 
   return (
     <>
-      <Button className="button" variant="link" onClick={handleShow}>
+      <Button
+        id="sign-up-button"
+        className="button"
+        variant="link"
+        onClick={handleShow}
+      >
         SIGN UP
       </Button>
 

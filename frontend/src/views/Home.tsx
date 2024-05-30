@@ -30,12 +30,12 @@ const Home: React.FC = () => {
       </div>
       {/* Second header */}
       {/* First container */}
-      <div className="second-header-text-container">
-        <div className="text-container"></div>
+      <div className="second-header-img-container">
+        <div className="img-container"></div>
       </div>
       {/* Third Container */}
-      <div className="second-header-text-container-2">
-        <div className="text-container-2"></div>
+      <div className="second-header-img-container-2">
+        <div className="img-container-2"></div>
       </div>
       <Header type="secondary" title={""} desc={""} /> {/* Title and desc? */}
       <div className="what-we-offer">
@@ -49,29 +49,27 @@ const Home: React.FC = () => {
       <div className="quickpage-container">
         <div className="qp-img">
           <QuickPage title={" "} bgImg="/images/watch.jpg" />
+          <div className="services">
+            <Modal />
+            <p>Sign up to take part of excluse deals</p>
+          </div>
         </div>
         <div className="qp-img">
           <QuickPage title={" "} bgImg="/images/letter.jpg" />
+          <div className="services">
+            <h4>SERVICES</h4>
+            <p>Contact us</p>
+          </div>
         </div>
         <div className="qp-img">
           <QuickPage title={" "} bgImg="/images/gift2.jpg" />
-        </div>
-        {/* Remove titles? */}
-      </div>
-      <div className="quickpage-text">
-        <div className="sign-up">
-          <Modal />
-          <p>Sign up to take part of excluse deals</p>
-        </div>
-        <div className="services">
-          <h4>SERVICES</h4>
-          <p>Contact us</p>
-        </div>
-        <div className="art-of-giving">
-          <h4>THE ART OF GIFTING</h4>
-          <p>Gifts for him and her</p>
+          <div className="services">
+            <h4>THE ART OF GIFTING</h4>
+            <p>Gifts for him and her</p>
+          </div>
         </div>
       </div>
+      {/* <div className="quickpage-text"></div> */}
       <Footer />
     </>
   );

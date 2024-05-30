@@ -9,7 +9,13 @@ const QuickPage: React.FC<QuickPageProps> = ({ title, bgImg }) => {
   return (
     <div
       className="quickpage-img-container"
-      style={{ backgroundImage: `url(${bgImg})` }}
+      style={{
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: "280px",
+        width: "370px",
+      }}
     >
       <div className="quickpage">
         <h3>{title}</h3>
