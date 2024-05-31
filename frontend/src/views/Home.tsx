@@ -6,6 +6,7 @@ import Footer from "../components/MainPage/Footer";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
+import "../Global.css";
 
 const Home: React.FC = () => {
   return (

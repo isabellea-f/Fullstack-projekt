@@ -5,20 +5,18 @@
 .video-container {
   display: flex;
   justify-content: center;
-  width: 1400px;
+  width: 80vw;
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 8vh;
+  position: relative;
 }
 
 .video {
   border: 3px solid rgb(0, 0, 0);
   box-sizing: border-box;
   width: 100%;
-}
-
-.video-container {
-  position: relative;
 }
 
 .video-text {
@@ -33,7 +31,25 @@
 
 .video-text h2 {
   font-size: 3.5rem;
-  height: 70px;
+  height: 80px;
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(34, 33, 33, 0.363),
+    rgba(34, 33, 33, 0.459)
+  );
 }
 
 /* Shop Women / Shop Men */
@@ -174,6 +190,9 @@
 .what-we-offer p {
   font-size: 1.25rem;
   font-weight: 100;
+  padding-left: 250px;
+  padding-right: 250px;
+  text-align: center;
 }
 
 /* Quickpage */
@@ -206,6 +225,14 @@
 }
 
 @media (max-width: 790px) {
+  .video-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .video {
+    border: none;
+  }
   .introduction-p {
     padding-left: 50px;
     padding-right: 50px;
