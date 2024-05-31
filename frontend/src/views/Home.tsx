@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/MainPage/Navbar";
-import Header from "../components/MainPage/Header"; /* 
-import ShopOption from "../components/MainPage/ShopOption"; */
+/* import Header from "../components/MainPage/Header"; */
 import QuickPage from "../components/MainPage/QuickPage";
 import Footer from "../components/MainPage/Footer";
 import "./Home.css";
@@ -13,7 +12,20 @@ const Home: React.FC = () => {
     <>
       <Navbar />
       {/* Video with text */}
-      <Header type="primary" title={"SPRING SUMMER 2024"} desc={""} />
+      <div className="video-container">
+        <video
+          autoPlay
+          loop
+          muted
+          className="video"
+          src="https://i.imgur.com/pbatDT1.mp4"
+        ></video>
+      </div>
+      <div className="video-text">
+        <h2>SPRING SUMMER 2024</h2>
+        <p>DISCOVER THE NEW COLLECTION</p>
+      </div>
+      {/*   <Header type="primary" title={"SPRING SUMMER 2024"} desc={""} /> */}
       <div id="introduction" className="introduction">
         <div className="link-to-shop-container">
           <Link to="/shop/women" className="link-to-shop">
@@ -29,15 +41,26 @@ const Home: React.FC = () => {
         </div>
       </div>
       {/* Second header */}
+
       {/* First container */}
-      <div className="second-header-img-container">
-        <div className="img-container"></div>
+
+      <div className="three-images-container">
+        <div className="second-header-img-container">
+          <div className="img-container-1"></div>
+        </div>
+
+        {/* Second Container */}
+        <div className="second-header-img-container-2">
+          <div className="img-container-2"></div>
+        </div>
+        {/* Third Container */}
+
+        <div className="third-header-img-container">
+          <div className="img-container-3"></div>
+        </div>
       </div>
-      {/* Third Container */}
-      <div className="second-header-img-container-2">
-        <div className="img-container-2"></div>
-      </div>
-      <Header type="secondary" title={""} desc={""} /> {/* Title and desc? */}
+
+      {/* <Header type="secondary" title={""} desc={""} /> */}
       <div className="what-we-offer">
         <h4>COMPANY ULTRA SERVICES</h4>
         <p>
