@@ -5,11 +5,13 @@ interface CartProduct {
   name: string;
   text: string;
   price: number;
+  img: string;
 }
 
 interface CartContextType {
   cartProducts: CartProduct[];
   addToCart: (product: CartProduct) => void;
+  deleteFromCart: (productId: string) => void; // Add this line
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -49,8 +51,31 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       });
   };
 
+  /* Delete from cart */
+
+  const deleteFromCart = (productId: string) => {
+    setCartProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== productId)
+    );
+
+    fetch(`/cart/${productId}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => console.log("Product removed from cart: ", data))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   return (
-    <CartContext.Provider value={{ cartProducts, addToCart }}>
+    <CartContext.Provider value={{ cartProducts, addToCart, deleteFromCart }}>
+      {" "}
       {children}
     </CartContext.Provider>
   );

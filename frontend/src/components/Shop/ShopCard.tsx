@@ -13,15 +13,29 @@ interface Product {
   img: string;
 }
 
-const ShopCard: React.FC<Product> = ({
+interface ShopCardProps extends Product {
+  onButtonClick: (id: string) => void;
+}
+
+const ShopCard: React.FC<ShopCardProps> = ({
   id,
   name,
   text,
   price,
   addRemove,
   img,
+  onButtonClick,
 }) => {
-  const { addToCart } = useCart();
+  const { addToCart, deleteFromCart } = useCart();
+
+  const handleClick = () => {
+    const product = { id, name, text, price, img };
+    if (addRemove === "Add to cart") {
+      addToCart(product);
+    } else if (addRemove === "Remove from cart") {
+      onButtonClick(id);
+    }
+  };
 
   return (
     <Card className="card-card" style={{ width: "18rem" }}>
@@ -48,14 +62,7 @@ const ShopCard: React.FC<Product> = ({
             background: "none",
             border: "none",
           }}
-          onClick={() =>
-            addToCart({
-              id,
-              name,
-              text,
-              price,
-            })
-          }
+          onClick={handleClick}
         >
           <span style={{ marginRight: "30px" }} className="add-to-cart">
             {addRemove}
@@ -68,45 +75,3 @@ const ShopCard: React.FC<Product> = ({
 };
 
 export default ShopCard;
-
-/* const ShopCard = () => {
-  const { addToCart } = useCart();
-
-  return (
-    <Card className="card-card" style={{ width: "18rem" }}>
-      <Card.Img
-        variant="top"
-        src="https://st4.depositphotos.com/34277362/41210/i/450/depositphotos_412106076-stock-photo-elegant-leather-ladies-handbag-isolated.jpg"
-      />
-      <Card.Body className="card-body">
-        <Card.Title>Black Handbag</Card.Title>
-        <Card.Text className="card-text">
-          This is a black handbag that is perfect for any occasion.
-        </Card.Text>
-        <p>Price: $50</p>
-        <button
-          style={{
-            display: "flex",
-            alignItems: "center",
-            background: "none",
-            border: "none",
-          }}
-          onClick={() =>
-            addToCart({
-              id: "1",
-              name: "Black Handbag",
-              text: "This is a black handbag that is perfect for any occasion.",
-              price: 50,
-            })
-          }
-        >
-          <span style={{ marginRight: "10px" }}>Add to Cart</span>
-          <FaShoppingCart size={30} color="grey" />
-        </button>
-      </Card.Body>
-    </Card>
-  );
-};
-
-export default ShopCard;
- */

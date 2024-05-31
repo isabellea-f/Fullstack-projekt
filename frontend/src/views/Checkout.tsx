@@ -9,6 +9,7 @@ interface Product {
   name: string;
   desc: string;
   price: number;
+  img: string;
 }
 
 const Checkout: React.FC<Product> = () => {
@@ -26,6 +27,28 @@ const Checkout: React.FC<Product> = () => {
       );
   }, []);
 
+  /* Delete */
+  const deleteFromCart = (id: string) => {
+    fetch(`/cart/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error deleting product from cart");
+        }
+        // Remove the deleted product from the cartItems state
+        setCartItems(
+          cartItems.filter((product) => product.product_id.toString() !== id)
+        );
+      })
+      .catch((error) =>
+        console.error(
+          "There was an error deleting the product from the cart:",
+          error
+        )
+      );
+  };
+
   return (
     <>
       <Navbar />
@@ -35,17 +58,19 @@ const Checkout: React.FC<Product> = () => {
         </div>
         <div className="checkout-container">
           <div className="cart-items">
-            {/*     {cartItems.map((product) => (
+            {cartItems.map((product) => (
               <ShopCard
                 key={product.product_id}
                 id={product.product_id.toString()}
                 name={product.name}
                 text={product.desc}
                 price={product.price}
+                img={product.img}
                 addRemove="Remove from cart"
+                onButtonClick={deleteFromCart}
               />
-            ))} */}
-            <ShopCard
+            ))}{" "}
+            {/* <ShopCard
               key="1"
               id="1"
               name="Dummy Product Name"
@@ -92,7 +117,7 @@ const Checkout: React.FC<Product> = () => {
               text=""
               price={99.99}
               addRemove="Remove from cart"
-            />
+            /> */}
           </div>
         </div>
         <Footer />

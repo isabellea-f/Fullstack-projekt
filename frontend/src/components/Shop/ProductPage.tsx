@@ -4,6 +4,7 @@ import Navbar from "../MainPage/Navbar";
 import { useParams } from "react-router-dom";
 import Footer from "../MainPage/Footer";
 import "./ProductPage.css";
+import { useCart } from "../MainPage/CartContent";
 
 interface Product {
   product_id: number;
@@ -16,6 +17,7 @@ interface Product {
 
 const ShopWomen = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const { addToCart } = useCart(); // Move this inside the component
 
   useEffect(() => {
     fetch("/product")
@@ -51,39 +53,60 @@ const ShopWomen = () => {
                 const id = Number(product.product_id);
                 return id >= 1 && id <= 4; /* 6 is the limit */
               })
-              .map((product) => (
-                <ShopCard
-                  key={product.product_id}
-                  id={product.product_id.toString()}
-                  name={product.name}
-                  text={product.desc}
-                  price={product.price}
-                  img={product.img}
-                  addRemove="Add to cart"
-                />
-              ))
+              .map((product) => {
+                const handleAddToCart = () => {
+                  addToCart({
+                    id: product.product_id.toString(),
+                    name: product.name,
+                    text: product.desc,
+                    price: product.price,
+                    img: product.img,
+                  });
+                };
+
+                return (
+                  <ShopCard
+                    key={product.product_id}
+                    id={product.product_id.toString()}
+                    name={product.name}
+                    text={product.desc}
+                    price={product.price}
+                    img={product.img}
+                    addRemove="Add to cart"
+                    onButtonClick={handleAddToCart}
+                  />
+                );
+              })
           : /* Mens accessories */
             products
               .filter((product) => {
                 const id = Number(product.product_id);
                 return id >= 7 && id <= 11;
               })
-              .map((product) => (
-                <ShopCard
-                  key={product.product_id}
-                  id={product.product_id.toString()}
-                  name={product.name}
-                  text={product.desc}
-                  price={product.price}
-                  img={product.img}
-                  addRemove="Add to cart"
-                />
-              ))}
-        {/* Testkort */}
-        {/*   <ShopCard />
-        <ShopCard />
-        <ShopCard />
-        <ShopCard /> */}
+              .map((product) => {
+                const handleAddToCart = () => {
+                  addToCart({
+                    id: product.product_id.toString(),
+                    name: product.name,
+                    text: product.desc,
+                    price: product.price,
+                    img: product.img,
+                  });
+                };
+
+                return (
+                  <ShopCard
+                    key={product.product_id}
+                    id={product.product_id.toString()}
+                    name={product.name}
+                    text={product.desc}
+                    price={product.price}
+                    img={product.img}
+                    addRemove="Add to cart"
+                    onButtonClick={handleAddToCart}
+                  />
+                );
+              })}
       </div>
 
       <div className="shop-headers">
@@ -98,34 +121,60 @@ const ShopWomen = () => {
                 const id = Number(product.product_id);
                 return id >= 12 && id <= 15;
               })
-              .map((product) => (
-                <ShopCard
-                  key={product.product_id}
-                  id={product.product_id.toString()}
-                  name={product.name}
-                  text={product.desc}
-                  price={product.price}
-                  img={product.img}
-                  addRemove="Add to cart"
-                />
-              ))
+              .map((product) => {
+                const handleAddToCart = () => {
+                  addToCart({
+                    id: product.product_id.toString(),
+                    name: product.name,
+                    text: product.desc,
+                    price: product.price,
+                    img: product.img,
+                  });
+                };
+
+                return (
+                  <ShopCard
+                    key={product.product_id}
+                    id={product.product_id.toString()}
+                    name={product.name}
+                    text={product.desc}
+                    price={product.price}
+                    img={product.img}
+                    addRemove="Add to cart"
+                    onButtonClick={handleAddToCart}
+                  />
+                );
+              })
           : /* Mens bags */
             products
               .filter((product) => {
                 const id = Number(product.product_id);
                 return id >= 16 && id <= 19;
               })
-              .map((product) => (
-                <ShopCard
-                  key={product.product_id}
-                  id={product.product_id.toString()}
-                  name={product.name}
-                  text={product.desc}
-                  price={product.price}
-                  img={product.img}
-                  addRemove="Add to cart"
-                />
-              ))}
+              .map((product) => {
+                const handleAddToCart = () => {
+                  addToCart({
+                    id: product.product_id.toString(),
+                    name: product.name,
+                    text: product.desc,
+                    price: product.price,
+                    img: product.img,
+                  });
+                };
+
+                return (
+                  <ShopCard
+                    key={product.product_id}
+                    id={product.product_id.toString()}
+                    name={product.name}
+                    text={product.desc}
+                    price={product.price}
+                    img={product.img}
+                    addRemove="Add to cart"
+                    onButtonClick={handleAddToCart}
+                  />
+                );
+              })}
       </div>
       <Footer />
     </div>
