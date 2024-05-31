@@ -49,3 +49,7 @@
 .price {
   padding-bottom: 20px;
 }
+
+.card-text-container {
+  height: 50px;
+}

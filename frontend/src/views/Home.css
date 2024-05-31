@@ -92,7 +92,7 @@
   align-items: center;
   justify-content: center;
   z-index: -200;
-  background-image: url("/images/rings.jpg");
+  background-image: url("https://i.imgur.com/922g39q.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid rgba(0, 0, 0, 0.288);
@@ -106,7 +106,7 @@
   align-items: center;
   justify-content: center;
   z-index: -200;
-  background-image: url("/images/white-handbag.jpg");
+  background-image: url("https://i.imgur.com/8Hcou52.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid rgba(0, 0, 0, 0.288);
@@ -118,7 +118,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 0px;
   margin-bottom: 100px;
 }
 

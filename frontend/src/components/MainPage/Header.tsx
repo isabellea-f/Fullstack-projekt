@@ -11,15 +11,19 @@ const Header: React.FC<HeaderProps> = ({ type, title, desc }) => {
   const headerStyle = type === "primary" ? "headerPrimary" : "headerSecondary";
 
   const mediaSource =
-    type === "primary" ? "/videos/model5.mp4" : "/images/sunglasses2.jpg";
+    type === "primary"
+      ? "/videos/model5(1).mp4"
+      : "https://i.imgur.com/5limkqH.jpeg";
 
   return (
     <div className="header-content">
       {type === "primary" ? (
-        <div className="video-container">
-          <video autoPlay loop muted className="Video">
-            <source src={mediaSource} type="video/mp4" />
-          </video>
+        <div className="video-container gradient">
+          <div className="video-container">
+            <video autoPlay loop muted className="Video">
+              <source src={mediaSource} type="video/mp4" />
+            </video>
+          </div>
         </div>
       ) : (
         <img src={mediaSource} alt="Header background" className="Image" />

@@ -11,6 +11,7 @@ interface Product {
   desc: string;
   price: number;
   addRemove: string;
+  img: string;
 }
 
 const ShopWomen = () => {
@@ -57,6 +58,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  img={product.img}
                   addRemove="Add to cart"
                 />
               ))
@@ -73,6 +75,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  img={product.img}
                   addRemove="Add to cart"
                 />
               ))}
@@ -102,6 +105,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  img={product.img}
                   addRemove="Add to cart"
                 />
               ))
@@ -118,6 +122,7 @@ const ShopWomen = () => {
                   name={product.name}
                   text={product.desc}
                   price={product.price}
+                  img={product.img}
                   addRemove="Add to cart"
                 />
               ))}

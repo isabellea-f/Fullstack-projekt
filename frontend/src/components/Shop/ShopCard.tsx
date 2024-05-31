@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import "./ShopCard.css";
 import { useCart } from "../MainPage/CartContent";
@@ -11,20 +10,36 @@ interface Product {
   text: string;
   price: number;
   addRemove: string;
+  img: string;
 }
 
-const ShopCard: React.FC<Product> = ({ id, name, text, price, addRemove }) => {
+const ShopCard: React.FC<Product> = ({
+  id,
+  name,
+  text,
+  price,
+  addRemove,
+  img,
+}) => {
   const { addToCart } = useCart();
 
   return (
     <Card className="card-card" style={{ width: "18rem" }}>
       <Card.Img
         variant="top"
-        src="https://st4.depositphotos.com/34277362/41210/i/450/depositphotos_412106076-stock-photo-elegant-leather-ladies-handbag-isolated.jpg"
+        src={img}
+        alt={name}
+        style={{
+          width: "300px",
+          height: "300px",
+          objectFit: "cover",
+        }}
       />
       <Card.Body className="card-body">
         <Card.Title>{name}</Card.Title>
-        <Card.Text className="card-text">{text}</Card.Text>
+        <div className="card-text-container">
+          <Card.Text className="card-text">{text}</Card.Text>
+        </div>
         <p className="price">{price}kr.</p>
         <button
           style={{

@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     <>
       <Navbar />
       {/* Video with text */}
-      <Header type="primary" title={"SPRING SUMMER"} desc={"/2024"} />
+      <Header type="primary" title={"SPRING SUMMER 2024"} desc={""} />
       <div id="introduction" className="introduction">
         <div className="link-to-shop-container">
           <Link to="/shop/women" className="link-to-shop">
@@ -48,21 +48,21 @@ const Home: React.FC = () => {
       </div>
       <div className="quickpage-container">
         <div className="qp-img">
-          <QuickPage title={" "} bgImg="/images/watch.jpg" />
+          <QuickPage title={" "} bgImg="https://i.imgur.com/LkYx944.jpeg" />
           <div className="services">
             <Modal />
             <p>Sign up to take part of excluse deals</p>
           </div>
         </div>
         <div className="qp-img">
-          <QuickPage title={" "} bgImg="/images/letter.jpg" />
+          <QuickPage title={" "} bgImg="https://i.imgur.com/YP83SCB.jpeg" />
           <div className="services">
             <h4>SERVICES</h4>
             <p>Contact us</p>
           </div>
         </div>
         <div className="qp-img">
-          <QuickPage title={" "} bgImg="/images/gift2.jpg" />
+          <QuickPage title={" "} bgImg="https://i.imgur.com/rYLbvMi.jpeg" />
           <div className="services">
             <h4>THE ART OF GIFTING</h4>
             <p>Gifts for him and her</p>
