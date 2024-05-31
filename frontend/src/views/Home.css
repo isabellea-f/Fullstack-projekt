@@ -30,8 +30,12 @@
 }
 
 .video-text h2 {
-  font-size: 3.5rem;
-  height: 80px;
+  font-size: 4rem;
+  height: 20vh;
+}
+
+.video-text p {
+  font-size: 1.7rem;
 }
 
 .video-container {
@@ -224,15 +228,44 @@
   justify-content: space-evenly;
 }
 
+@media (max-width: 1200px) {
+  .video-text {
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-text h2,
+  .video-text p {
+    font-size: 2rem;
+    height: 50px;
+    color: white;
+  }
+}
 @media (max-width: 790px) {
   .video-container {
     width: 100%;
     height: auto;
   }
 
+  .video-text h2,
+  .video-text p {
+    font-size: 16px;
+  }
+
+  .video-text {
+    top: 25%;
+    left: 50%;
+    width: 400px;
+  }
   .video {
     border: none;
   }
+
   .introduction-p {
     padding-left: 50px;
     padding-right: 50px;
