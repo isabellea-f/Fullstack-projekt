@@ -95,8 +95,8 @@ app.post("/cart", (req, res) => {
   const product = req.body;
   console.log(product.name);
   db.run(
-    `INSERT INTO cart (product_id, name, price) VALUES (?, ?, ?)`,
-    [product.id, product.name, product.price],
+    `INSERT INTO cart (product_id, name, price, img) VALUES (?, ?, ?, ?)`,
+    [product.id, product.name, product.price, product.img],
     function (err) {
       if (err) {
         console.error(err.message);
