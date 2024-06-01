@@ -6,3 +6,9 @@
   border-radius: 5px !important;
   cursor: pointer !important;
 }
+
+.total {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

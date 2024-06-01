@@ -94,46 +94,7 @@ const Checkout: React.FC<Product> = () => {
               price={99.99}
               addRemove="Remove from cart"
             />{" "}
-            <ShopCard
-              key="1"
-              id="1"
-              name="Dummy Product Name"
-              text=""
-              price={99.99}
-              addRemove="Remove from cart"
-            />{" "}
-            <ShopCard
-              key="1"
-              id="1"
-              name="Dummy Product Name"
-              text=""
-              price={99.99}
-              addRemove="Remove from cart"
-            />{" "}
-            <ShopCard
-              key="1"
-              id="1"
-              name="Dummy Product Name"
-              text=""
-              price={99.99}
-              addRemove="Remove from cart"
-            />
-            <ShopCard
-              key="1"
-              id="1"
-              name="Dummy Product Name"
-              text=""
-              price={99.99}
-              addRemove="Remove from cart"
-            />
-            <ShopCard
-              key="1"
-              id="1"
-              name="Dummy Product Name"
-              text=""
-              price={99.99}
-              addRemove="Remove from cart"
-            /> */}
+           */}
           </div>
         </div>
         <Footer />

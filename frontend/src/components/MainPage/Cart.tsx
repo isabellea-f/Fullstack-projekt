@@ -34,21 +34,31 @@ const Cart: React.FC = () => {
     0
   );
 
+  const taxRate = 0.05;
+  const totalWithTax = total + total * taxRate;
+
   return (
     <div>
-      {productsWithQuantity.map((product) => (
+      {productsWithQuantity.map((product, index) => (
         <div key={product.id}>
+          <img
+            src={product.img}
+            alt=""
+            style={{ width: "70px", height: "70px" }}
+          />
           <p>
-            {product.name}: ${product.price} x {product.quantity}{" "}
-            <img
-              src={product.img}
-              alt=""
-              style={{ width: "70px", height: "70px" }}
-            />
+            <strong>{product.name}</strong>: ${product.price}{" "}
+            <strong>Qty:</strong>
+            {product.quantity}{" "}
           </p>
+          {index < productsWithQuantity.length - 1 && <hr />}{" "}
+          {/* Add this line */}
         </div>
       ))}
-      <h2>Total: ${total}</h2>
+      {/* <h2>Total: ${total.toFixed(2)}</h2> */}
+      <p className="total">
+        Total Amount Including Sales Tax: ${totalWithTax.toFixed(2)}
+      </p>
       <Button variant="primary" className="checkout-button">
         <Link
           to="/checkout"
