@@ -81,7 +81,7 @@ const ShopWomen = () => {
             products
               .filter((product) => {
                 const id = Number(product.product_id);
-                return id >= 7 && id <= 11;
+                return id >= 7 && id <= 9;
               })
               .map((product) => {
                 const handleAddToCart = () => {
@@ -149,7 +149,7 @@ const ShopWomen = () => {
             products
               .filter((product) => {
                 const id = Number(product.product_id);
-                return id >= 16 && id <= 19;
+                return id >= 16 && id <= 17;
               })
               .map((product) => {
                 const handleAddToCart = () => {
