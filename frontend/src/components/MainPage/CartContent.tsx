@@ -59,7 +59,13 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     );
 
     fetch(`/cart/${productId}`, {
-      method: "DELETE",
+      method: "PATCH",
+      body: JSON.stringify({
+        quantityChange: -1,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((response) => {
         if (!response.ok) {
@@ -67,7 +73,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         }
         return response.json();
       })
-      .then((data) => console.log("Product removed from cart: ", data))
+      .then((data) => console.log("Product quantity updated: ", data))
       .catch((error) => {
         console.error("Error:", error);
       });

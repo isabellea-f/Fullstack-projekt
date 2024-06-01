@@ -10,6 +10,7 @@ interface Product {
   desc: string;
   price: number;
   img: string;
+  quantity: number;
 }
 
 const Checkout: React.FC<Product> = () => {
@@ -20,7 +21,21 @@ const Checkout: React.FC<Product> = () => {
       .then((response) => response.json())
       .then((data: Product[]) => {
         console.log("Fetched cart items:", data);
-        setCartItems(data);
+
+        // Transform data into an array where each item is unique and has a quantity property
+        const productsWithQuantity = data.reduce<Product[]>((acc, product) => {
+          const foundProduct = acc.find(
+            (item) => item.product_id === product.product_id
+          );
+          if (foundProduct) {
+            foundProduct.quantity = (foundProduct.quantity || 0) + 1;
+          } else {
+            acc.push({ ...product, quantity: 1 });
+          }
+          return acc;
+        }, []);
+
+        setCartItems(productsWithQuantity);
       })
       .catch((error) =>
         console.error("There was an error fetching cart data:", error)
@@ -63,13 +78,14 @@ const Checkout: React.FC<Product> = () => {
                 key={product.product_id}
                 id={product.product_id.toString()}
                 name={product.name}
-                text={product.desc}
-                price={product.price}
+                text={`Quantity: ${product.quantity}`}
+                price={product.price * product.quantity}
                 img={product.img}
                 addRemove="Remove from cart"
                 onButtonClick={deleteFromCart}
               />
-            ))}{" "}
+            ))}
+
             {/* <ShopCard
               key="1"
               id="1"
