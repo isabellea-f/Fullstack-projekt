@@ -47,7 +47,7 @@ const Cart: React.FC = () => {
             style={{ width: "70px", height: "70px" }}
           />
           <p>
-            <strong>{product.name}</strong>: ${product.price}{" "}
+            <strong>{product.name}</strong>: {product.price}kr{" "}
             <strong>Qty:</strong>
             {product.quantity}{" "}
           </p>
@@ -57,7 +57,7 @@ const Cart: React.FC = () => {
       ))}
       {/* <h2>Total: ${total.toFixed(2)}</h2> */}
       <p className="total">
-        Total Amount Including Sales Tax: ${totalWithTax.toFixed(2)}
+        Total Amount Including Sales Tax: {totalWithTax.toFixed(2)} kr
       </p>
       <Button variant="primary" className="checkout-button">
         <Link
