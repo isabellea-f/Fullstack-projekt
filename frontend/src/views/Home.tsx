@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           loop
           muted
           className="video"
-          src="https://i.imgur.com/pbatDT1.mp4"
+          src="https://videos.pexels.com/video-files/8306904/8306904-hd_1280_720_25fps.mp4"
         ></video>
       </div>
       <div className="video-text">
@@ -40,27 +40,40 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-        <p className="introduction-p">DON’T WAIT TO INDULGE</p>
+        <h2 className="introduction-header">
+          INTRODUCING COMPANY ULTRA POUR FEMME AND POUR HOMME
+        </h2>
+        <p className="introduction-p">
+          ENCASED IN SCULPTURAL CHAIN-LINK BOTTLES, OUR NEW FRAGRANCES EVOKE A
+          SENSE OF LUXURY AND ESCAPE—CAPTURING THE MULTIFACETED ALLURE OF THE
+          MODERN WOMAN AND MAN.{" "}
+        </p>
       </div>
-      {/* Second header */}
 
-      {/* First container */}
+      <div className="image-container">
+        <div className="sunglasses-model">
+          <h4>NEW IN</h4>
+        </div>
+        <div className="jewellry-model">
+          <h4> COMPANY ULTRA ICONS</h4>
+        </div>
+      </div>
 
-      <div className="three-images-container">
+      {/*    <div className="three-images-container">
         <div className="second-header-img-container">
           <div className="img-container-1"></div>
         </div>
 
-        {/* Second Container */}
+
         <div className="second-header-img-container-2">
           <div className="img-container-2"></div>
         </div>
-        {/* Third Container */}
+     
 
         <div className="third-header-img-container">
           <div className="img-container-3"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* <Header type="secondary" title={""} desc={""} /> */}
       <div className="what-we-offer">

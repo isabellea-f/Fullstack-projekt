@@ -44,7 +44,9 @@ const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
       <nav>
         <ul>
           <li>
-            <a href="#introduction">SHOP</a>
+            <a href="#introduction" className="shop-link">
+              SHOP
+            </a>
           </li>
           <li>
             <Link to="/">COLLECTION</Link>

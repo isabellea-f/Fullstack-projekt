@@ -5,8 +5,7 @@
 .video-container {
   display: flex;
   justify-content: center;
-  width: 88vw;
-  height: auto;
+  height: 900px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5vh;
@@ -14,9 +13,8 @@
 }
 
 .video {
-  border: 3px solid rgb(0, 0, 0);
   box-sizing: border-box;
-  width: 100%;
+  width: 90%;
 }
 
 .video-text {
@@ -67,26 +65,45 @@
 }
 
 .link-to-shop-container-women {
-  background-image: url("https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2675.jpg?t=st=1717258500~exp=1717262100~hmac=8a399471a0ef1cabd6e1c5b4cc897073ed27b2ec4ddd3526111ab1dca0e65e3d&w=740");
-  height: 600px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.205),
+      rgba(0, 0, 0, 0.205)
+    ),
+    url("https://i.imgur.com/pOUYOGq.jpeg");
+  height: 700px;
+  width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 20px;
 }
 
 .link-to-shop-container-men {
-  background-image: url("https://img.freepik.com/free-photo/portrait-fashionable-boy-against-blue-wall_23-2148184863.jpg?t=st=1717257801~exp=1717261401~hmac=529d798167330d362c1796754820324ce43c499474cd01f906e196f98b52ec49&w=740");
-  height: 600px;
+  /* background-image: url("https://img.freepik.com/free-photo/portrait-fashionable-boy-against-blue-wall_23-2148184863.jpg?t=st=1717257801~exp=1717261401~hmac=529d798167330d362c1796754820324ce43c499474cd01f906e196f98b52ec49&w=740");
+ */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.24),
+      rgba(0, 0, 0, 0.24)
+    ),
+    url("https://i.imgur.com/lE7oVoa.jpeg");
+  height: 700px;
+  width: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 20px;
 }
 
 .link-to-shop {
   padding: 0px 15px;
   margin: 0px 90px;
-  color: white;
+  color: white !important;
   background-color: #ffffff00;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -94,11 +111,14 @@
   font-size: 2rem;
   letter-spacing: 18px;
   position: relative;
-  font: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   border: 2px solid #ffffff;
 }
 
+a.link-to-shop {
+  color: white;
+}
 /* .link-to-shop::after {
   content: "";
   position: absolute;
@@ -122,20 +142,84 @@
   align-items: center;
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
   width: 100%;
 }
 
+.introduction-header {
+  margin-top: 4vh;
+  font-size: 3rem;
+  height: 120px;
+  padding-left: 450px;
+  padding-right: 450px;
+}
 .introduction-p {
   padding-left: 500px;
   padding-right: 500px;
   text-align: center;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 200;
   margin-top: 2vh;
   letter-spacing: 0px;
 }
 
+.image-container {
+  width: 100%;
+  height: 750px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sunglasses-model {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://i.imgur.com/PnZnyrY.jpeg");
+  width: 500px;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sunglasses-model h4,
+.jewellry-model h4 {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  width: 400px;
+  height: 150px;
+  margin-top: 140px;
+}
+
+.jewellry-model {
+  /*  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("https://img.freepik.com/free-photo/display-shiny-luxurious-golden-chain_23-2149635260.jpg?t=st=1717313959~exp=1717317559~hmac=7050a0103733c444f2a9c4a57a21a3aed33793dfb87d64e8a17bef3adc2dc2f8&w=1380"); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("https://i.imgur.com/0jpgZ8i.jpeg");
+  width: 700px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .three-images-container {
   width: 100%;
   display: flex;
