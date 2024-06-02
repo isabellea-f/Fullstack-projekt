@@ -29,17 +29,18 @@ const Home: React.FC = () => {
       {/*   <Header type="primary" title={"SPRING SUMMER 2024"} desc={""} /> */}
       <div id="introduction" className="introduction">
         <div className="link-to-shop-container">
-          <Link to="/shop/women" className="link-to-shop">
-            Shop Women
-          </Link>
-          <Link to="/shop/men" className="link-to-shop">
-            Shop Men
-          </Link>
-          <p className="introduction-p">
-            DON’T WAIT TO INDULGE IN THE LUXURY YOU DESERVE. BROWSE OUR
-            COLLECTION AND FIND YOUR NEW FAVORITE ACCESSORY.
-          </p>
+          <div className="link-to-shop-container-women">
+            <Link to="/shop/women" className="link-to-shop">
+              SHOP WOMEN
+            </Link>
+          </div>
+          <div className="link-to-shop-container-men">
+            <Link to="/shop/men" className="link-to-shop">
+              SHOP MEN
+            </Link>
+          </div>
         </div>
+        <p className="introduction-p">DON’T WAIT TO INDULGE</p>
       </div>
       {/* Second header */}
 
@@ -63,11 +64,10 @@ const Home: React.FC = () => {
 
       {/* <Header type="secondary" title={""} desc={""} /> */}
       <div className="what-we-offer">
-        <h4>COMPANY ULTRA SERVICES</h4>
+        <h4>SERVICES</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus sed
-          excepturi omnis aspernatur harum voluptate, nemo laudantium ducimus
-          ut?
+          excepturi omnis aspernatur harum voluptate.
         </p>
       </div>
       <div className="quickpage-container">
