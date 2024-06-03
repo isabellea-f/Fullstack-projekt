@@ -2,19 +2,21 @@
 
 /* Video */
 
+.video {
+  width: 90%;
+  height: auto;
+  border: 2px solid black;
+}
+
 .video-container {
   display: flex;
   justify-content: center;
-  height: 900px;
+  /* height: auto; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5vh;
-  position: relative;
-}
 
-.video {
-  box-sizing: border-box;
-  width: 90%;
+  position: relative;
 }
 
 .video-text {
@@ -24,7 +26,13 @@
   transform: translate(-50%, -50%);
   color: white;
   font-family: "Playfair Display", serif;
+  display: flex;
+  flex-wrap: wrap;
   width: 700px;
+}
+
+.video-text-2 {
+  display: none;
 }
 
 .video-text h2 {
@@ -45,17 +53,17 @@
 }
 
 .video-container::after {
-  content: "";
+  /*   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /*  background: linear-gradient(
+   background: linear-gradient(
     to right,
     rgba(194, 204, 207, 0.829),
     rgba(255, 252, 252, 0)
-  ); */
+  );  */
 }
 
 /* Shop Women / Shop Men */
@@ -129,10 +137,10 @@ a.link-to-shop {
   background-color: #000000;
   transition: width 0.4s ease;
 } */
-
+/* 
 .link-to-shop:hover::after {
   width: 50%;
-}
+} */
 
 /* First paragraph */
 .introduction {
@@ -145,17 +153,19 @@ a.link-to-shop {
   margin-bottom: 5vh;
   width: 100%;
 }
-
+.introduction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
 .introduction-header {
   margin-top: 4vh;
   font-size: 3rem;
-  height: 120px;
-  padding-left: 450px;
-  padding-right: 450px;
+  overflow-y: hidden;
 }
 .introduction-p {
-  padding-left: 500px;
-  padding-right: 500px;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 200;
@@ -188,7 +198,7 @@ a.link-to-shop {
   text-align: center;
 }
 .sunglasses-model h4,
-.jewellry-model h4 {
+.bag-model h4 {
   color: white;
   font-size: 3rem;
   letter-spacing: 8px;
@@ -197,7 +207,7 @@ a.link-to-shop {
   margin-top: 140px;
 }
 
-.jewellry-model {
+.bag-model {
   /*  background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.25),
@@ -219,39 +229,6 @@ a.link-to-shop {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.three-images-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 5vh;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.45);
-  padding-bottom: 40px; /* adjust as needed */
-}
-.img-container-1,
-.img-container-2,
-.img-container-3 {
-  margin-top: 100px;
-  width: 500px;
-  height: 500px;
-  z-index: -200;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid rgba(0, 0, 0, 0.288);
-}
-.img-container-1 {
-  background-image: url("https://i.imgur.com/922g39q.jpeg");
-}
-
-.img-container-2 {
-  background-image: url("https://i.imgur.com/5limkqH.jpeg");
-  position: relative;
-  top: -70px;
-}
-
-.img-container-3 {
-  background-image: url("https://i.imgur.com/8Hcou52.jpeg");
 }
 
 /* Services */
@@ -309,60 +286,89 @@ a.link-to-shop {
   justify-content: space-evenly;
 }
 
+/* 1200 */
 @media (max-width: 1200px) {
+  .link-to-shop-container-women,
+  .link-to-shop-container-men {
+    width: 100%;
+    height: 350px;
+  }
+
+  .video {
+    width: 100%;
+    border: none;
+  }
+  .video-container {
+    height: auto;
+    width: 100%;
+  }
   .video-text {
-    top: 40%;
-    left: 50%;
-    position: absolute;
+    display: none;
+  }
+
+  .video-text-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-text-2 h2 {
+    height: 40px;
+  }
+}
+
+/* 1500 */
+
+@media (max-width: 1500px) {
+  .introduction-header {
+    font-size: 2rem;
+  }
+  .image-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 1200px;
   }
-
-  .video-text h2,
-  .video-text p {
-    font-size: 2rem;
-    height: 50px;
-    color: white;
+  .sunglasses-model,
+  .bag-model {
+    margin: 10px 0;
+    width: 70%;
+    height: 80vh;
   }
 }
+
+/* 790 */
 @media (max-width: 790px) {
-  .video-container {
-    width: 100%;
-    height: auto;
+  /* Links */
+
+  .sunglasses-model,
+  .bag-model {
+    margin: 10px 0;
+    width: 90%;
+    /* height: 50vh; */
   }
 
-  .video-text h2,
-  .video-text p {
-    font-size: 16px;
+  .bag-model h4 {
+    height: 200px;
+  }
+  .link-to-shop {
+    width: 50vw;
+    font-size: 1.5rem;
   }
 
-  .video-text {
-    top: 25%;
-    left: 50%;
-    width: 400px;
-  }
-  .video {
-    border: none;
+  .link-to-shop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .introduction-p {
-    padding-left: 50px;
-    padding-right: 50px;
+  .link-to-shop-container-women,
+  .link-to-shop-container-men {
+    flex-direction: column;
+    margin: 10px 0;
   }
 
-  /* Images */
-  .img-container-1,
-  .img-container-2,
-  .img-container-3 {
-    width: 175px;
-    height: 180px;
-  }
-
-  .three-images-container {
-    margin-top: -50px;
-  }
   .what-we-offer h4 {
     font-size: 2rem;
     text-align: center;

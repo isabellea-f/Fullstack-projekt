@@ -21,8 +21,12 @@ const Home: React.FC = () => {
           className="video"
           src="https://videos.pexels.com/video-files/8306904/8306904-hd_1280_720_25fps.mp4"
         ></video>
+        <div className="video-text">
+          <h2>SPRING SUMMER 2024</h2>
+          <p>DISCOVER THE NEW COLLECTION</p>
+        </div>
       </div>
-      <div className="video-text">
+      <div className="video-text-2">
         <h2>SPRING SUMMER 2024</h2>
         <p>DISCOVER THE NEW COLLECTION</p>
       </div>
@@ -40,21 +44,23 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-        <h2 className="introduction-header">
-          INTRODUCING COMPANY ULTRA POUR FEMME AND POUR HOMME
-        </h2>
-        <p className="introduction-p">
-          ENCASED IN SCULPTURAL CHAIN-LINK BOTTLES, OUR NEW FRAGRANCES EVOKE A
-          SENSE OF LUXURY AND ESCAPE—CAPTURING THE MULTIFACETED ALLURE OF THE
-          MODERN WOMAN AND MAN.{" "}
-        </p>
+        <div className="introduction-container">
+          <h2 className="introduction-header">
+            INTRODUCING COMPANY ULTRA POUR FEMME AND POUR HOMME
+          </h2>
+          <p className="introduction-p">
+            ENCASED IN SCULPTURAL CHAIN-LINK BOTTLES, OUR NEW FRAGRANCES EVOKE A
+            SENSE OF LUXURY AND ESCAPE—CAPTURING THE MULTIFACETED ALLURE OF THE
+            MODERN WOMAN AND MAN.{" "}
+          </p>
+        </div>
       </div>
 
       <div className="image-container">
         <div className="sunglasses-model">
           <h4>NEW IN</h4>
         </div>
-        <div className="jewellry-model">
+        <div className="bag-model">
           <h4> COMPANY ULTRA ICONS</h4>
         </div>
       </div>
