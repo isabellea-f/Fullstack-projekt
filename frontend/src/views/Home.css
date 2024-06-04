@@ -5,13 +5,12 @@
 .video {
   width: 90%;
   height: auto;
-  border: 2px solid black;
+  border: 4px solid black;
 }
 
 .video-container {
   display: flex;
   justify-content: center;
-  /* height: auto; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5vh;
@@ -71,6 +70,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 20px;
+  /* 
+  border: 5px solid black; */
 }
 
 .link-to-shop-container-men {
@@ -79,7 +80,7 @@
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url("https://i.imgur.com/zYt9b2r.jpeg");
+    url("https://i.imgur.com/hetkju6.jpeg");
   height: 700px;
   width: 750px;
   display: flex;
@@ -88,6 +89,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 20px;
+  /* 
+  border: 5px solid black; */
 }
 
 .link-to-shop {
@@ -145,7 +148,7 @@ a.link-to-shop {
   width: 100%;
   height: 700px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .sunglasses-model {
@@ -159,11 +162,13 @@ a.link-to-shop {
   height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: -50px;
+  margin-right: -450px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 5px solid black;
+  cursor: pointer;
 }
 .sunglasses-model h4,
 .bag-model h4 {
@@ -179,6 +184,7 @@ a.link-to-shop {
 .bag-model h4 {
   margin-top: 90px;
   height: 250px;
+  width: 650px;
 }
 
 .bag-model {
@@ -192,11 +198,13 @@ a.link-to-shop {
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: -150px;
+  margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 5px solid black;
+  cursor: pointer;
 }
 
 /* Services */
@@ -239,6 +247,10 @@ a.link-to-shop {
   margin-bottom: 8vh;
   text-align: center;
   width: 100%;
+}
+
+.quickpage-img-container {
+  border: 1px solid black;
 }
 
 .services {
@@ -371,5 +383,9 @@ a.link-to-shop {
   .quickpage-text p,
   .quickpage-text h4 {
     font-size: 1rem;
+  }
+
+  .services {
+    margin-bottom: 20px;
   }
 }

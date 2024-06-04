@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsHandbag } from "react-icons/bs";
+import { PiBagSimpleThin } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import LoginModal from "../LoginModal";
 import Sidebar from "./SideBar";
-import HamburgerMenu from "./HamburgerMenu"; // Import HamburgerMenu
+import HamburgerMenu from "./HamburgerMenu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.css";
 
@@ -38,7 +38,7 @@ const Navbar: React.FC<Props> = ({ title = "ANTOINE MARTIN" }) => {
             onClick={toggleHamburgerMenu}
           />
           <Link to="/">{title}</Link>
-          <BsHandbag className="bag-icon" onClick={toggleSidebar} />
+          <PiBagSimpleThin className="bag-icon" onClick={toggleSidebar} />
         </h1>
       </header>
       <nav>
