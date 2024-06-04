@@ -101,7 +101,7 @@ const Checkout: React.FC<Product> = () => {
                 text={`Quantity: ${product.quantity}`}
                 price={product.price * product.quantity}
                 img={product.img}
-                addRemove="Remove from cart"
+                addRemove="Remove"
                 onButtonClick={deleteFromCart}
               />
             ))}
