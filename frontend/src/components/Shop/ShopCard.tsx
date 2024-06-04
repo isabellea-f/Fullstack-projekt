@@ -32,7 +32,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
     const product = { id, name, text, price, img };
     if (addRemove === "Add to cart") {
       addToCart(product);
-    } else if (addRemove === "Remove from cart") {
+    } else if (addRemove === "Remove") {
       onButtonClick(id);
     }
   };
