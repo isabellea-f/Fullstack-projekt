@@ -1,11 +1,9 @@
 /* Sign up link */
 .button {
   font-size: 1.4rem !important;
-  font-weight: 400 !important;
-  letter-spacing: 2px !important;
+  font-weight: 600 !important;
+  letter-spacing: 4px !important;
   height: 30px !important;
-  font-family: "Montserrat", sans-serif !important;
-  /* margin-right: 80px !important; */
   margin-bottom: 10px;
 }
 

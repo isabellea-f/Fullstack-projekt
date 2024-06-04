@@ -57,15 +57,15 @@ const Home: React.FC = () => {
           <h4>NEW IN</h4>
         </div>
         <div className="bag-model">
-          <h4> ANTONIE MARTIN ICONS</h4>
+          <h4> ANTOINE MARTIN ICONS</h4>
         </div>
       </div>
 
       <div className="what-we-offer">
-        <h4>Antonie Martin Services</h4>
+        <h4>ANTOINE MARTIN SERVICES</h4>
         <p>
           Explore our range of exceptional offerings designed to enhance your
-          experience
+          experience.
         </p>
       </div>
       <div className="quickpage-container">

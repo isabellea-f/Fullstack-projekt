@@ -39,10 +39,7 @@ const ShopWomen = () => {
     <div>
       <Navbar />
       <div className="shop-headers">
-        <h2>
-          Shop {category.charAt(0).toUpperCase() + category.slice(1)}'s
-          Collection
-        </h2>
+        <h2>SHOP {category.toUpperCase()}'S COLLECTION</h2>
         <h3 className="accessories">ACCESSORIES</h3>
       </div>
       <div className="card-container">
@@ -110,7 +107,7 @@ const ShopWomen = () => {
       </div>
 
       <div className="shop-headers">
-        <h3 className="accessories">BAGS</h3>
+        <h3 className="bags">BAGS</h3>
       </div>
 
       <div className="card-container">

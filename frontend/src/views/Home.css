@@ -74,8 +74,6 @@
 }
 
 .link-to-shop-container-men {
-  /* background-image: url("https://img.freepik.com/free-photo/portrait-fashionable-boy-against-blue-wall_23-2148184863.jpg?t=st=1717257801~exp=1717261401~hmac=529d798167330d362c1796754820324ce43c499474cd01f906e196f98b52ec49&w=740");
- */
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.3),
@@ -103,7 +101,6 @@
   font-size: 2rem;
   letter-spacing: 18px;
   position: relative;
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   border: 2px solid #ffffff;
 }
@@ -139,8 +136,8 @@ a.link-to-shop {
 .introduction-p {
   text-align: center;
   font-size: 1.2rem;
-  font-weight: 200;
-  letter-spacing: 2px;
+  font-weight: 300;
+  letter-spacing: 1px;
   margin-bottom: 8vh;
 }
 
@@ -172,7 +169,7 @@ a.link-to-shop {
 .bag-model h4 {
   color: white;
   font-size: 3.5rem;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 8px;
   width: 400px;
   height: 150px;
@@ -217,24 +214,20 @@ a.link-to-shop {
 }
 
 .what-we-offer h4 {
-  margin-top: 8vh;
-  font-size: 2rem;
-  font-weight: 400;
-  height: 5vh;
-  width: 100%;
-  text-align: center;
-  font-weight: 400;
+  margin-top: 5vh;
+  font-size: 2.7rem;
+  overflow-y: hidden;
+  font-weight: 600;
   letter-spacing: 8px;
-
   overflow-y: hidden;
 }
 
 .what-we-offer p {
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 2px;
-  padding-left: 350px;
-  padding-right: 350px;
+  padding-left: 494px;
+  padding-right: 494px;
   text-align: center;
   margin-bottom: 4vh;
 }
@@ -254,21 +247,20 @@ a.link-to-shop {
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
-  margin-bottom: 8vh;
+  margin-bottom: 20vh;
 }
 
 .services h4 {
   font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 4px;
   height: 30px;
-  font-family: "Montserrat", sans-serif;
 }
 
 .services p {
-  font-size: 1rem;
-  letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
 .quickpage-container {

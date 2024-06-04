@@ -5,19 +5,24 @@
   color: #333;
 }
 
-.shop-headers h2,
-h3 {
-  height: 60px;
-  font-weight: 200;
-  letter-spacing: 3.5px;
-  font-size: 2rem;
+.shop-headers h2 {
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin-bottom: 50px;
 }
 
+.bags {
+  letter-spacing: 24.5px;
+  font-weight: 200;
+}
 .accessories {
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-decoration: underline;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 8px;
+}
+h3 {
+  height: 60px;
+  font-size: 2rem;
 }
 
 .card-container {
