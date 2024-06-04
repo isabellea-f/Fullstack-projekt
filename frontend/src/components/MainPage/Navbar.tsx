@@ -12,7 +12,7 @@ interface Props {
   title?: string;
 }
 
-const Navbar: React.FC<Props> = ({ title = "COMPANY ULTRA" }) => {
+const Navbar: React.FC<Props> = ({ title = "ANTOINE MARTIN" }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 

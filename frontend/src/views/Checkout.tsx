@@ -3,6 +3,7 @@ import Navbar from "../components/MainPage/Navbar";
 import Footer from "../components/MainPage/Footer";
 import Button from "react-bootstrap/Button";
 import ShopCard from "../components/Shop/ShopCard";
+import { Link } from "react-router-dom";
 import "./Checkout.css";
 
 interface Product {
@@ -106,9 +107,14 @@ const Checkout: React.FC<Product> = () => {
             ))}
           </div>
           <div className="proceed-to-checkout-container">
-            <Button variant="dark" className="checkout-button">
+            <Button
+              as={Link}
+              to="/thankyou"
+              variant="dark"
+              className="checkout-button"
+            >
               Proceed to checkout
-            </Button>{" "}
+            </Button>
           </div>
         </div>
         <Footer />

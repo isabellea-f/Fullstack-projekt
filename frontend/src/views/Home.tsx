@@ -58,7 +58,7 @@ const Home: React.FC = () => {
           <h4>NEW IN</h4>
         </div>
         <div className="bag-model">
-          <h4> COMPANY ULTRA ICONS</h4>
+          <h4> ANTONIE MARTIN ICONS</h4>
         </div>
       </div>
 
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
 
       {/* <Header type="secondary" title={""} desc={""} /> */}
       <div className="what-we-offer">
-        <h4>SERVICES</h4>
+        <h4>Antonie Martin Services</h4>
         <p>
           Explore our range of exceptional offerings designed to enhance your
           experience

@@ -1,0 +1,28 @@
+.thank-you-container {
+  text-align: center;
+  padding: 20px;
+  width: 100;
+}
+
+.thank-you-header {
+  font-size: 2rem;
+  height: 80px;
+}
+
+.thank-you-subheader {
+  font-size: 2rem;
+  height: 80px;
+}
+
+.thank-you-message {
+  color: #000;
+  font-size: 18px;
+}
+
+.thank-you-container {
+  padding-bottom: 80px;
+}
+
+.email-icon {
+  font-size: 4rem;
+}

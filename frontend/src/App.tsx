@@ -5,6 +5,7 @@ import Home from "./views/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductPage from "./components/Shop/ProductPage";
 import Checkout from "./views/Checkout";
+import ThankYou from "./views/ThankYou";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/shop/:category" element={<ProductPage />} />
         <Route path="/shop/:category" element={<ProductPage />} />
         <Route path="/checkout" Component={Checkout} />
+        <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
     </Router>
   );
