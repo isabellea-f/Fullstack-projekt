@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/MainPage/Navbar";
 import Footer from "../components/MainPage/Footer";
+import Button from "react-bootstrap/Button";
 import ShopCard from "../components/Shop/ShopCard";
 import "./Checkout.css";
 
@@ -87,7 +88,7 @@ const Checkout: React.FC<Product> = () => {
       <Navbar />
       <div className="Checkout">
         <div className="centered-container">
-          <h2 className="checkout-title">Checkout</h2>
+          <h2 className="checkout-title">Your Cart</h2>
         </div>
         <div className="checkout-container">
           <div className="cart-items">
@@ -103,6 +104,11 @@ const Checkout: React.FC<Product> = () => {
                 onButtonClick={deleteFromCart}
               />
             ))}
+          </div>
+          <div className="proceed-to-checkout-container">
+            <Button variant="dark" className="checkout-button">
+              Proceed to checkout
+            </Button>{" "}
           </div>
         </div>
         <Footer />

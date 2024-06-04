@@ -43,7 +43,7 @@ const ShopWomen = () => {
           Shop {category.charAt(0).toUpperCase() + category.slice(1)}'s
           Collection
         </h2>
-        <h3 className="accessories">Accessories</h3>
+        <h3 className="accessories">ACCESSORIES</h3>
       </div>
       <div className="card-container">
         {/* Womens accessories */}
@@ -110,7 +110,7 @@ const ShopWomen = () => {
       </div>
 
       <div className="shop-headers">
-        <h3 className="accessories">Bags</h3>
+        <h3 className="accessories">BAGS</h3>
       </div>
 
       <div className="card-container">
