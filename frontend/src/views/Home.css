@@ -127,7 +127,7 @@ a.link-to-shop {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
 }
 .introduction-header {
   margin-top: 5vh;
@@ -311,8 +311,15 @@ a.link-to-shop {
 /* 1500 */
 
 @media (max-width: 1500px) {
+  .introduction-container {
+    text-align: center;
+  }
+
   .introduction-header {
     font-size: 2rem;
+  }
+  .introduction-p {
+    font-size: 1rem;
   }
   .image-container {
     display: flex;
@@ -329,7 +336,6 @@ a.link-to-shop {
   }
 }
 
-/* 790 */
 @media (max-width: 790px) {
   /* Links */
 
@@ -337,14 +343,13 @@ a.link-to-shop {
   .bag-model {
     margin: 10px 0;
     width: 90%;
-    /* height: 50vh; */
   }
 
   .bag-model h4 {
     height: 200px;
   }
   .link-to-shop {
-    width: 50vw;
+    width: 65vw;
     font-size: 1.5rem;
   }
 
