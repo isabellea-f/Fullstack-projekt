@@ -107,13 +107,8 @@ const Checkout: React.FC<Product> = () => {
             ))}
           </div>
           <div className="proceed-to-checkout-container">
-            <Button
-              as={Link}
-              to="/thankyou"
-              variant="dark"
-              className="checkout-button"
-            >
-              Proceed to checkout
+            <Button variant="dark" className="checkout-button">
+              <Link to="/thankyou">Proceed to checkout</Link>
             </Button>
           </div>
         </div>

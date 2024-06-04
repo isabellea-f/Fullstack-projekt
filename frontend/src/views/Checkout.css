@@ -14,8 +14,8 @@
 
 .cart-items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid rgb(39, 39, 39);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 .checkout-container {
@@ -33,4 +33,22 @@
   border-radius: 0px !important;
   width: 180px !important;
   margin-top: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .checkout-container {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .checkout-container {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .checkout-container {
+    margin: 0px;
+  }
 }
