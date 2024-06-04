@@ -45,13 +45,10 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="introduction-container">
-          <h2 className="introduction-header">
-            INTRODUCING COMPANY ULTRA POUR FEMME AND POUR HOMME
-          </h2>
+          <h2 className="introduction-header">UNVEILING AURA</h2>
           <p className="introduction-p">
-            ENCASED IN SCULPTURAL CHAIN-LINK BOTTLES, OUR NEW FRAGRANCES EVOKE A
-            SENSE OF LUXURY AND ESCAPE—CAPTURING THE MULTIFACETED ALLURE OF THE
-            MODERN WOMAN AND MAN.{" "}
+            DIVE INTO A WORLD OF SOPHISTICATION WITH AURA, CAPTURING THE ESSENCE
+            OF MODERN INDIVIDUALITY AND STYLE.
           </p>
         </div>
       </div>
@@ -85,8 +82,8 @@ const Home: React.FC = () => {
       <div className="what-we-offer">
         <h4>SERVICES</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus sed
-          excepturi omnis aspernatur harum voluptate.
+          Explore our range of exceptional offerings designed to enhance your
+          experience
         </p>
       </div>
       <div className="quickpage-container">
@@ -101,7 +98,7 @@ const Home: React.FC = () => {
           <QuickPage title={" "} bgImg="https://i.imgur.com/YP83SCB.jpeg" />
           <div className="services">
             <h4>SERVICES</h4>
-            <p>Contact us</p>
+            <p>Connect with out Services team.</p>
           </div>
         </div>
         <div className="qp-img">

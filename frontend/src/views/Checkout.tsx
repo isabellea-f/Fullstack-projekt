@@ -12,37 +12,35 @@ interface Product {
   img: string;
   quantity: number;
 }
-
 const Checkout: React.FC<Product> = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
 
+  function fetchCartItems() {
+    fetch("/cart")
+      .then((response) => response.json())
+      .then((data: Product[]) => {
+        console.log("Fetched cart items:", data);
+        setCartItems(data);
+      })
+      .catch((error) =>
+        console.error("There was an error fetching cart data:", error)
+      );
+  }
+
+  /* Fetch cart data */
   useEffect(() => {
     fetch("/cart")
       .then((response) => response.json())
       .then((data: Product[]) => {
         console.log("Fetched cart items:", data);
-
-        // Transform data into an array where each item is unique and has a quantity property
-        const productsWithQuantity = data.reduce<Product[]>((acc, product) => {
-          const foundProduct = acc.find(
-            (item) => item.product_id === product.product_id
-          );
-          if (foundProduct) {
-            foundProduct.quantity = (foundProduct.quantity || 0) + 1;
-          } else {
-            acc.push({ ...product, quantity: 1 });
-          }
-          return acc;
-        }, []);
-
-        setCartItems(productsWithQuantity);
+        setCartItems(data);
       })
       .catch((error) =>
         console.error("There was an error fetching cart data:", error)
       );
   }, []);
 
-  /* Delete */
+  /* Remove from cart */
   const deleteFromCart = (id: string) => {
     fetch(`/cart/${id}`, {
       method: "DELETE",
@@ -51,10 +49,30 @@ const Checkout: React.FC<Product> = () => {
         if (!response.ok) {
           throw new Error("Error deleting product from cart");
         }
-        // Remove the deleted product from the cartItems state
         setCartItems(
-          cartItems.filter((product) => product.product_id.toString() !== id)
+          cartItems.reduce((result, item) => {
+            if (item.product_id.toString() === id) {
+              if (item.quantity > 1) {
+                fetch(`/cart/${id}`, {
+                  method: "PUT",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ quantity: item.quantity - 1 }),
+                }).catch((error) =>
+                  console.error(
+                    "There was an error decreasing the product quantity:",
+                    error
+                  )
+                );
+              }
+            } else {
+              result.push(item);
+            }
+            return result;
+          }, [] as Product[])
         );
+        fetchCartItems();
       })
       .catch((error) =>
         console.error(
@@ -85,16 +103,6 @@ const Checkout: React.FC<Product> = () => {
                 onButtonClick={deleteFromCart}
               />
             ))}
-
-            {/* <ShopCard
-              key="1"
-              id="1"
-              name="Dummy Product Name"
-              text=""
-              price={99.99}
-              addRemove="Remove from cart"
-            />{" "}
-           */}
           </div>
         </div>
         <Footer />

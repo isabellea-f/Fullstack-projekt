@@ -17,7 +17,7 @@ interface Product {
 
 const ShopWomen = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const { addToCart } = useCart(); // Move this inside the component
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetch("/product")

@@ -11,7 +11,7 @@ interface CartProduct {
 interface CartContextType {
   cartProducts: CartProduct[];
   addToCart: (product: CartProduct) => void;
-  deleteFromCart: (productId: string) => void; // Add this line
+  deleteFromCart: (productId: string) => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);

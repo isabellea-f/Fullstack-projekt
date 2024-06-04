@@ -1,3 +1,4 @@
+/* Sign up link */
 .button {
   font-size: 1.55rem !important;
   text-decoration: none !important;
@@ -7,6 +8,7 @@
   margin: 0 !important;
   font-weight: 200 !important;
   letter-spacing: 3px;
+  border-radius: 0px !important;
 }
 
 .form {
@@ -30,6 +32,7 @@
   width: 50%;
   background-color: black !important;
   border: none !important;
+  border-radius: 0px !important;
   width: 50%;
   background-color: black;
 }
