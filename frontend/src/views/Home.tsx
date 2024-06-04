@@ -73,14 +73,14 @@ const Home: React.FC = () => {
           <QuickPage title={" "} bgImg="https://i.imgur.com/LkYx944.jpeg" />
           <div className="services">
             <Modal />
-            <p>Sign up to take part of excluse deals</p>
+            <p>Discover member exclusives</p>
           </div>
         </div>
         <div className="qp-img">
           <QuickPage title={" "} bgImg="https://i.imgur.com/YP83SCB.jpeg" />
           <div className="services">
             <h4>SERVICES</h4>
-            <p>Connect with out Services team.</p>
+            <p>Contact us</p>
           </div>
         </div>
         <div className="qp-img">

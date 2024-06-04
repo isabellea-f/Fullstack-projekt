@@ -260,6 +260,7 @@ a.link-to-shop {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20vh;
+  overflow-y: hidden;
 }
 
 .services h4 {
