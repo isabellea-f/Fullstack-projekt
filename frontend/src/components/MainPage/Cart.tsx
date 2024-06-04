@@ -142,14 +142,16 @@ const Cart: React.FC = () => {
       <p className="total">
         Total Amount Including Sales Tax: {totalWithTax.toFixed(2)} kr
       </p>
-      <Button variant="primary" className="checkout-button">
-        <Link
-          to="/checkout"
-          style={{ color: "inherit", textDecoration: "inherit" }}
-        >
-          Proceed to Checkout
-        </Link>
-      </Button>
+      <div className="checkout-button-container">
+        <Button variant="primary" className="checkout-button">
+          <Link
+            to="/checkout"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            Proceed to Checkout
+          </Link>
+        </Button>
+      </div>
       <div className="refresh-button-container">
         <Button
           variant="secondary"

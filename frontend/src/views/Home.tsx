@@ -30,7 +30,6 @@ const Home: React.FC = () => {
         <h2>SPRING SUMMER 2024</h2>
         <p>DISCOVER THE NEW COLLECTION</p>
       </div>
-      {/*   <Header type="primary" title={"SPRING SUMMER 2024"} desc={""} /> */}
       <div id="introduction" className="introduction">
         <div className="link-to-shop-container">
           <div className="link-to-shop-container-women">
@@ -62,23 +61,6 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/*    <div className="three-images-container">
-        <div className="second-header-img-container">
-          <div className="img-container-1"></div>
-        </div>
-
-
-        <div className="second-header-img-container-2">
-          <div className="img-container-2"></div>
-        </div>
-     
-
-        <div className="third-header-img-container">
-          <div className="img-container-3"></div>
-        </div>
-      </div> */}
-
-      {/* <Header type="secondary" title={""} desc={""} /> */}
       <div className="what-we-offer">
         <h4>Antonie Martin Services</h4>
         <p>

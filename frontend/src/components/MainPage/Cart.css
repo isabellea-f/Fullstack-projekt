@@ -17,6 +17,11 @@
   display: flex;
   justify-content: center;
 }
+
+.checkout-button-container {
+  display: flex;
+  justify-content: center;
+}
 .total {
   display: flex;
   justify-content: center;
