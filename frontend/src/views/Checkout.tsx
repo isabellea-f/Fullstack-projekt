@@ -14,6 +14,7 @@ interface Product {
   img: string;
   quantity: number;
 }
+
 const Checkout: React.FC<Product> = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
 
@@ -29,20 +30,18 @@ const Checkout: React.FC<Product> = () => {
       );
   }
 
-  /* Fetch cart data */
   useEffect(() => {
-    fetch("/cart")
-      .then((response) => response.json())
-      .then((data: Product[]) => {
-        console.log("Fetched cart items:", data);
-        setCartItems(data);
-      })
-      .catch((error) =>
-        console.error("There was an error fetching cart data:", error)
-      );
+    fetchCartItems();
   }, []);
 
-  /* Remove from cart */
+  const total = cartItems.reduce(
+    (sum, product) => sum + product.price * product.quantity,
+    0
+  );
+
+  const taxRate = 0.05;
+  const totalWithTax = total + total * taxRate;
+
   const deleteFromCart = (id: string) => {
     fetch(`/cart/${id}`, {
       method: "DELETE",
@@ -89,7 +88,7 @@ const Checkout: React.FC<Product> = () => {
       <Navbar />
       <div className="Checkout">
         <div className="centered-container">
-          <h2 className="checkout-title">Your Cart</h2>
+          <h2 className="checkout-title">CART</h2>
         </div>
         <div className="checkout-container">
           <div className="cart-items">
@@ -105,6 +104,13 @@ const Checkout: React.FC<Product> = () => {
                 onButtonClick={deleteFromCart}
               />
             ))}
+          </div>
+          <div className="checkout-total">
+            <p>Shipping: 0.00 kr</p>
+            <p>Total: {total} kr</p>
+            <p>
+              Total Amount Including Sales Tax: {totalWithTax.toFixed(2)} kr
+            </p>
           </div>
           <div className="proceed-to-checkout-container">
             <Button variant="dark" className="checkout-button">
