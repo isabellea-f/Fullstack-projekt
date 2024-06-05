@@ -15,6 +15,17 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get("/account", (req: Request, res: Response) => {
+  db.all("SELECT * FROM account", (err, rows) => {
+    if (err) {
+      console.log(err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.json(rows);
+  });
+});
+
 // FETCH ALL PRODUCTS
 app.get("/product", (req: Request, res: Response) => {
   db.all("SELECT * FROM product", (err, rows) => {
