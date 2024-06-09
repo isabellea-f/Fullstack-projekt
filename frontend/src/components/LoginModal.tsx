@@ -4,6 +4,8 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./LoginModal.css";
 
+/* Login form */
+
 function LoginModal() {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");

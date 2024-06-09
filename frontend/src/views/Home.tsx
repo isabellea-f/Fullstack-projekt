@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/MainPage/Navbar";
-/* import Header from "../components/MainPage/Header"; */
 import QuickPage from "../components/MainPage/QuickPage";
 import Footer from "../components/MainPage/Footer";
 import "./Home.css";
@@ -9,6 +8,27 @@ import Modal from "../components/Modal";
 import "../Global.css";
 
 const Home: React.FC = () => {
+  const quickPages = [
+    {
+      title: " ",
+      bgImg: "https://i.imgur.com/LkYx944.jpeg",
+      serviceTitle: "Discover member exclusives",
+      modal: true,
+    },
+    {
+      title: " ",
+      bgImg: "https://i.imgur.com/YP83SCB.jpeg",
+      serviceTitle: "Contact us",
+      header: "SERVICES",
+    },
+    {
+      title: " ",
+      bgImg: "https://i.imgur.com/rYLbvMi.jpeg",
+      serviceTitle: "Gifts for him and her",
+      header: "THE ART OF GIFTING",
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -25,10 +45,11 @@ const Home: React.FC = () => {
           <h2>SPRING SUMMER 2024</h2>
           <p>DISCOVER THE NEW COLLECTION</p>
         </div>
-      </div>
-      <div className="video-text-2">
-        <h2>SPRING SUMMER 2024</h2>
-        <p>DISCOVER THE NEW COLLECTION</p>
+
+        <div className="video-text-2">
+          <h2>SPRING SUMMER 2024</h2>
+          <p>DISCOVER THE NEW COLLECTION</p>
+        </div>
       </div>
       <div id="introduction" className="introduction">
         <div className="link-to-shop-container">
@@ -69,29 +90,17 @@ const Home: React.FC = () => {
         </p>
       </div>
       <div className="quickpage-container">
-        <div className="qp-img">
-          <QuickPage title={" "} bgImg="https://i.imgur.com/LkYx944.jpeg" />
-          <div className="services">
-            <Modal />
-            <p>Discover member exclusives</p>
+        {quickPages.map((page, index) => (
+          <div className="qp-img" key={index}>
+            <QuickPage title={page.title} bgImg={page.bgImg} />
+            <div className="services">
+              {page.modal && <Modal />}
+              {page.header && <h4>{page.header}</h4>}
+              <p>{page.serviceTitle}</p>
+            </div>
           </div>
-        </div>
-        <div className="qp-img">
-          <QuickPage title={" "} bgImg="https://i.imgur.com/YP83SCB.jpeg" />
-          <div className="services">
-            <h4>SERVICES</h4>
-            <p>Contact us</p>
-          </div>
-        </div>
-        <div className="qp-img">
-          <QuickPage title={" "} bgImg="https://i.imgur.com/rYLbvMi.jpeg" />
-          <div className="services">
-            <h4>THE ART OF GIFTING</h4>
-            <p>Gifts for him and her</p>
-          </div>
-        </div>
+        ))}
       </div>
-      {/* <div className="quickpage-text"></div> */}
       <Footer />
     </>
   );

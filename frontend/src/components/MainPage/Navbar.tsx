@@ -57,13 +57,13 @@ const Navbar: React.FC<Props> = ({ title = "ANTOINE MARTIN" }) => {
           <li>
             <Link to="/">ART OF GIFTING</Link>
           </li>
+          {/* Login popup link */}
           <li className="login-modal-container">
             <LoginModal />
           </li>
         </ul>
       </nav>
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-      {/* Use HamburgerMenu */}
     </div>
   );
 };

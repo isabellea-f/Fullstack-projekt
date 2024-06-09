@@ -69,13 +69,13 @@ nav a::after {
   height: 1.2px;
   bottom: 0;
   left: 15%;
-  background-color: #000; /* Change this to the color of your underline */
+  background-color: #000;
   transform-origin: bottom left;
   transition: transform 0.3s ease-out;
 }
 
 nav a:hover::after {
-  transform: scaleX(1); /* This will make the underline appear on hover */
+  transform: scaleX(1);
 }
 .login-modal-container {
   display: flex;

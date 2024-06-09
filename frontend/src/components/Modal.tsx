@@ -4,6 +4,8 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./Modal.css";
 
+/* Sign up form */
+
 function CloseShow() {
   const [show, setShow] = useState(false);
 

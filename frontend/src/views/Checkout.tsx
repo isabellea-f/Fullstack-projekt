@@ -15,7 +15,7 @@ interface Product {
   quantity: number;
 }
 
-const Checkout: React.FC<Product> = () => {
+const Checkout: React.FC = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
 
   function fetchCartItems() {
@@ -25,9 +25,7 @@ const Checkout: React.FC<Product> = () => {
         console.log("Fetched cart items:", data);
         setCartItems(data);
       })
-      .catch((error) =>
-        console.error("There was an error fetching cart data:", error)
-      );
+      .catch((error) => console.error("error fetching cart data:", error));
   }
 
   useEffect(() => {
@@ -48,7 +46,7 @@ const Checkout: React.FC<Product> = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Error deleting product from cart");
+          throw new Error("Couldn't delete product from cart");
         }
         setCartItems(
           cartItems.reduce((result, item) => {
@@ -60,12 +58,7 @@ const Checkout: React.FC<Product> = () => {
                     "Content-Type": "application/json",
                   },
                   body: JSON.stringify({ quantity: item.quantity - 1 }),
-                }).catch((error) =>
-                  console.error(
-                    "There was an error decreasing the product quantity:",
-                    error
-                  )
-                );
+                }).catch((error) => console.error(error));
               }
             } else {
               result.push(item);

@@ -15,7 +15,7 @@ interface Product {
   img: string;
 }
 
-const ShopWomen = () => {
+const ShopCategories = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const { addToCart } = useCart();
 
@@ -26,9 +26,7 @@ const ShopWomen = () => {
         console.log("Fetched products:", data);
         setProducts(data);
       })
-      .catch((error) =>
-        console.error("There was an error fetching product data:", error)
-      );
+      .catch((error) => console.error("error fetching product data:", error));
   }, []);
 
   console.log(products);
@@ -44,11 +42,12 @@ const ShopWomen = () => {
       </div>
       <div className="card-container">
         {/* Womens accessories */}
+
         {category === "women"
           ? products
               .filter((product) => {
                 const id = Number(product.product_id);
-                return id >= 1 && id <= 4; /* 6 is the limit */
+                return id >= 1 && id <= 4;
               })
               .map((product) => {
                 const handleAddToCart = () => {
@@ -75,6 +74,7 @@ const ShopWomen = () => {
                 );
               })
           : /* Mens accessories */
+
             products
               .filter((product) => {
                 const id = Number(product.product_id);
@@ -106,6 +106,8 @@ const ShopWomen = () => {
               })}
       </div>
 
+      {/* Bags title */}
+
       <div className="shop-headers">
         <h3 className="bags">BAGS</h3>
       </div>
@@ -113,6 +115,7 @@ const ShopWomen = () => {
       <div className="card-container">
         {category === "women"
           ? /* Womens bags */
+
             products
               .filter((product) => {
                 const id = Number(product.product_id);
@@ -143,6 +146,7 @@ const ShopWomen = () => {
                 );
               })
           : /* Mens bags */
+
             products
               .filter((product) => {
                 const id = Number(product.product_id);
@@ -178,4 +182,4 @@ const ShopWomen = () => {
   );
 };
 
-export default ShopWomen;
+export default ShopCategories;

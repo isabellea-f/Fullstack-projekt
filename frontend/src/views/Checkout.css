@@ -39,9 +39,15 @@
 
 .proceed-to-checkout-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-total {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +61,13 @@
 }
 
 .checkout-button a {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.checkout-button a:visited {
+  text-decoration: none !important;
+  color: white !important;
 }
 
 @media screen and (max-width: 768px) {

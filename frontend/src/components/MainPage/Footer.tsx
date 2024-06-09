@@ -1,26 +1,3 @@
-/* import "./Footer.css";
-
-interface FooterProps {
-  title: string;
-  desc: string;
-}
-
-const Footer: React.FC<FooterProps> = ({ title, desc }) => {
-  return (
-    <>
-      <div className="footer">
-        <h2>{title}</h2>
-        <p>{desc}</p>
-        <p>{desc}</p>
-        <p>{desc}</p>
-      </div>
-    </>
-  );
-};
-
-export default Footer;
- */
-
 import "./Footer.css";
 
 const Footer: React.FC = () => {
@@ -33,6 +10,7 @@ const Footer: React.FC = () => {
         <a href="/press">Press</a>
         <a href="/sustainability">Sustainability</a>
       </div>
+
       <div className="footer-group">
         <h4>Customer Service</h4>
         <a href="/faq">FAQ</a>

@@ -3,10 +3,11 @@
   font-size: 1.4rem !important;
   font-weight: 600 !important;
   letter-spacing: 4px !important;
-  height: 30px !important;
+  height: 37px !important;
   margin-bottom: 10px;
 }
 
+/* Form */
 .form {
   width: 100%;
   max-width: 400px;

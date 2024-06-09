@@ -1,5 +1,6 @@
+/* Cart slider */
+
 import Cart from "./Cart";
-/* import { IoCloseOutline } from "react-icons/io5"; */
 import { VscClose } from "react-icons/vsc";
 import "./SideBar.css";
 

@@ -14,7 +14,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5vh;
-
   position: relative;
 }
 
@@ -47,9 +46,7 @@
   letter-spacing: 10px;
 }
 
-.video-container {
-  position: relative;
-}
+/* Shop women / men */
 
 .link-to-shop-container {
   display: flex;
@@ -70,8 +67,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 20px;
-  /* 
-  border: 5px solid black; */
 }
 
 .link-to-shop-container-men {
@@ -89,8 +84,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 20px;
-  /* 
-  border: 5px solid black; */
 }
 
 .link-to-shop {
@@ -209,9 +202,6 @@ a.link-to-shop {
 
 /* Services */
 
-.services {
-  width: 100%;
-}
 .what-we-offer {
   margin-top: 15vh;
   display: flex;
@@ -227,7 +217,6 @@ a.link-to-shop {
   overflow-y: hidden;
   font-weight: 600;
   letter-spacing: 8px;
-  overflow-y: hidden;
 }
 
 .what-we-offer p {
@@ -261,13 +250,14 @@ a.link-to-shop {
   margin-top: 20px;
   margin-bottom: 20vh;
   overflow-y: hidden;
+  width: 100%;
 }
 
 .services h4 {
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 4px;
-  height: 30px;
+  height: 37px;
 }
 
 .services p {
