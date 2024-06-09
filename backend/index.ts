@@ -57,9 +57,7 @@ app.post("/", (request: Request, response: Response) => {
   db.run(sql, [first_name, last_name, email, password], function (err) {
     if (err) {
       console.error(err.message);
-      response
-        .status(500)
-        .send("An error occurred while saving the form data.");
+      response.status(500).send("Couldn't save form data");
     } else {
       response.send("User data has been received and saved.");
     }
@@ -68,7 +66,6 @@ app.post("/", (request: Request, response: Response) => {
 
 /* LOGIN */
 
-app.use(express.json());
 interface Account {
   email: string;
   password: string;
@@ -157,20 +154,6 @@ app.get("/cart", (req, res) => {
   });
 });
 
-/* Delete from cart */
-
-/* app.delete("/cart/:id", (req, res) => {
-  const id = req.params.id;
-  db.run(`DELETE FROM cart WHERE product_id = ?`, id, function (err) {
-    if (err) {
-      console.error(err.message);
-      res.status(500).send("Database error");
-      return;
-    }
-    res.json({ message: "Product removed from cart" });
-  });
-}); */
-
 interface CartItem {
   quantity: number;
 }
@@ -214,10 +197,9 @@ app.delete("/cart/:id", (req, res) => {
     }
   );
 });
-// Middleware to serve static files from the dist folder
+
 app.use(express.static(path.join(path.resolve(), "dist")));
 
-// Catch-all route handler
 app.get("*", (req, res) => {
   res.sendFile(path.join(path.resolve(), "dist", "index.html"));
 });
